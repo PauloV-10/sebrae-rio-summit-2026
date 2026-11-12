@@ -9,8 +9,24 @@
   var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWYYWSLhJPtqj_2kPcZCWcyHw_qrSdKv2_1jigUK0O81QaEQ/viewform';
   var KEY_PASS = 'srs26_pass';
   var KEY_DISP = 'demo_eleven_disp'; /* mesma identidade de aparelho do estudo CBS */
+  /* chave master da equipe: só o hash fica no fonte; libera sem rede e sem trava */
+  var MASTER_SHA = 'a230d3de81b7055168e6e20f37eec627010846cd4136a9eab22850cd39252e04';
 
   var $ = function (s) { return document.querySelector(s); };
+
+  function sha256(txt) {
+    if (!(window.crypto && crypto.subtle && window.TextEncoder))
+      return Promise.resolve('');
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt))
+      .then(function (buf) {
+        return Array.prototype.map.call(new Uint8Array(buf), function (b) {
+          return ('0' + b.toString(16)).slice(-2);
+        }).join('');
+      });
+  }
+  function eMaster(codigo) {
+    return sha256(codigo).then(function (h) { return h === MASTER_SHA; });
+  }
 
   function disp() {
     try {
@@ -69,13 +85,20 @@
       if (!c) { erro('Digite o código recebido por e-mail.'); return; }
       bt.disabled = true;
       bt.textContent = 'Conferindo...';
-      valida(c).then(function (j) {
-        if (j && j.ok) {
+      eMaster(c).then(function (master) {
+        if (master) {
           try { localStorage.setItem(KEY_PASS, c); } catch (e) {}
           libera();
-        } else erro((j && j.motivo) || 'Código recusado.');
-      }).catch(function () {
-        erro('Sem conexão com o validador. Tente de novo.');
+          return;
+        }
+        valida(c).then(function (j) {
+          if (j && j.ok) {
+            try { localStorage.setItem(KEY_PASS, c); } catch (e) {}
+            libera();
+          } else erro((j && j.motivo) || 'Código recusado.');
+        }).catch(function () {
+          erro('Sem conexão com o validador. Tente de novo.');
+        });
       });
     }
     bt.addEventListener('click', envia);
@@ -89,12 +112,15 @@
   try { pass = localStorage.getItem(KEY_PASS); } catch (e) {}
   if (pass) {
     libera(); /* já entrou neste aparelho: libera e revalida por trás */
-    valida(pass).then(function (j) {
-      if (j && !j.ok) {
-        try { localStorage.removeItem(KEY_PASS); } catch (e) {}
-        location.reload();
-      }
-    }).catch(function () { /* sem rede: mantém liberado */ });
+    eMaster(pass).then(function (master) {
+      if (master) return; /* chave master não revalida na rede */
+      valida(pass).then(function (j) {
+        if (j && !j.ok) {
+          try { localStorage.removeItem(KEY_PASS); } catch (e) {}
+          location.reload();
+        }
+      }).catch(function () { /* sem rede: mantém liberado */ });
+    });
   } else {
     mostra();
   }
