@@ -14,11 +14,11 @@ const raw = JSON.parse(fs.readFileSync(path.join(SCRATCH, 'agenda-completa.json'
 
 // ---------- salas ----------
 const ROOMS = [
-  { id: 'futuro', name: 'Palco Futuro', short: 'Futuro', emoji: '🎤', color: '#264D55', cap: 3000, local: 'Térreo' },
-  { id: 'atitude', name: 'Sala Atitude', short: 'Atitude', emoji: '✊', color: '#8A4FBF', cap: 500, local: '2º piso · Sala 203 C' },
-  { id: 'canva', name: 'Sala CANVA', short: 'CANVA', emoji: '🎨', color: '#00A5B5', cap: 500, local: '2º piso' },
-  { id: 'juridica', name: 'Sala Inovação Jurídica', short: 'Jurídica', emoji: '⚖️', color: '#C98A2D', cap: 500, local: '2º piso' },
-  { id: 'unisuam', name: 'Sala UNISUAM', short: 'UNISUAM', emoji: '🎓', color: '#B5485E', cap: 500, local: '2º piso' },
+  { id: 'futuro', name: 'Palco Futuro', short: 'Futuro', emoji: '🎤', color: '#264D55', cap: 3000, local: 'Térreo · Sala 101' },
+  { id: 'atitude', name: 'Sala Atitude', short: 'Atitude', emoji: '✊', color: '#8A4FBF', cap: 500, local: 'Piso superior · Sala 203 C' },
+  { id: 'canva', name: 'Sala CANVA', short: 'CANVA', emoji: '🎨', color: '#00A5B5', cap: 500, local: 'Piso superior' },
+  { id: 'juridica', name: 'Sala Inovação Jurídica', short: 'Jurídica', emoji: '⚖️', color: '#C98A2D', cap: 500, local: 'Piso superior' },
+  { id: 'unisuam', name: 'Sala UNISUAM', short: 'UNISUAM', emoji: '🎓', color: '#B5485E', cap: 500, local: 'Térreo · Sala 103' },
 ];
 const roomIdByName = (n) => {
   const t = (n || '').toLowerCase();

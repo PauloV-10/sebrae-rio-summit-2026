@@ -13,7 +13,7 @@
     userTouched: false, pendingFit: null,
     floor: 0,
   };
-  const POI_ICON = { banheiro: '🚻', entrada: '🚪', alimentacao: '🍽️', compras: '🛍️', info: 'ℹ️', food: '🍔', escada: '🪜' };
+  const POI_ICON = { banheiro: '🚻', entrada: '🚪', alimentacao: '🍽️', compras: '🛍️', info: 'ℹ️', food: '🍔', escada: '🪜', agua: '💧' };
 
   const $ = (s) => document.querySelector(s);
   const el = (tag, attrs) => {
@@ -196,7 +196,7 @@
   }
   function buildFloorButtons() {
     const bar = document.querySelector('.map-toolbar');
-    [[0, '🏟️ Térreo'], [1, '🪜 2º piso']].forEach(([f, label]) => {
+    [[0, '🏟️ Térreo'], [1, '🪜 Piso superior']].forEach(([f, label]) => {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'btn' + (f === 0 ? ' btn-primary' : '');
@@ -213,11 +213,13 @@
     lg.innerHTML = '';
     const add = (html) => { const s = document.createElement('span'); s.className = 'legend-item'; s.innerHTML = html; lg.appendChild(s); };
     data.rooms.forEach((r) => add(`<span class="legend-swatch" style="background:${hexA(r.color, 0.5)};border:1px solid ${r.color}"></span>${r.short}`));
-    add('<span class="legend-swatch" style="background:rgba(133,177,174,.45)"></span>Espaços');
+    add('<span class="legend-swatch" style="background:rgba(133,177,174,.45)"></span>Espaços Sebrae');
+    add('<span class="legend-swatch" style="background:rgba(154,205,120,.45)"></span>Parceiros');
     add('<span class="legend-swatch" style="background:rgba(243,204,119,.6)"></span>Credenciamento');
     add('<span class="legend-swatch" style="background:rgba(230,126,34,.4)"></span>Alimentação');
     add('🚻 Banheiros');
-    add('🪜 Escada rolante');
+    add('🪜 Escadas e elevadores');
+    add('💧 Hidratação');
     add('<span class="legend-swatch" style="background:#1668DC;border-radius:50%"></span>Você');
   }
 

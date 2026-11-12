@@ -18,7 +18,7 @@
    "emoji": "🎤",
    "color": "#264D55",
    "cap": 3000,
-   "local": "Térreo"
+   "local": "Térreo · Sala 101"
   },
   {
    "id": "atitude",
@@ -27,7 +27,7 @@
    "emoji": "✊",
    "color": "#8A4FBF",
    "cap": 500,
-   "local": "2º piso · Sala 203 C"
+   "local": "Piso superior · Sala 203 C"
   },
   {
    "id": "canva",
@@ -36,7 +36,7 @@
    "emoji": "🎨",
    "color": "#00A5B5",
    "cap": 500,
-   "local": "2º piso"
+   "local": "Piso superior"
   },
   {
    "id": "juridica",
@@ -45,7 +45,7 @@
    "emoji": "⚖️",
    "color": "#C98A2D",
    "cap": 500,
-   "local": "2º piso"
+   "local": "Piso superior"
   },
   {
    "id": "unisuam",
@@ -54,7 +54,7 @@
    "emoji": "🎓",
    "color": "#B5485E",
    "cap": 500,
-   "local": "2º piso"
+   "local": "Térreo · Sala 103"
   }
  ],
  "days": [

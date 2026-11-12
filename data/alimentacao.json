@@ -1,24 +1,46 @@
 {
- "aviso": "Os operadores da praça de alimentação mudam a cada edição e não são divulgados no site oficial. Esta lista é atualizada pela equipe Portes durante o evento: nomes, cardápios e Instagram entram aqui assim que confirmados no local.",
+ "aviso": "Pontos de alimentação conforme a planta oficial do térreo e o mapa do evento. Nomes de operadores e cardápios entram aqui assim que confirmados no local pela equipe Portes.",
  "locais": [
   {
-   "id": "praca",
-   "nome": "Praça de Alimentação do Summit",
-   "emoji": "🍽️",
-   "onde": "Centro do pavilhão, entre o credenciamento e o Mercado Sebrae",
+   "id": "lanchonete",
+   "nome": "Lanchonete do Centro de Convenções",
+   "emoji": "☕",
+   "onde": "Térreo, canto nordeste, ao lado da entrada do estacionamento",
    "status": "confirmado",
-   "desc": "Área central de alimentação do evento, com operadores de lanches, refeições rápidas, cafés e bebidas. Cardápios e preços ficam expostos em cada balcão.",
+   "desc": "Ponto fixo de lanches rápidos, salgados, doces e café do prédio. Fica no caminho de quem chega pela entrada nordeste.",
    "cardapio": [],
    "instagram": null,
-   "foco": { "tipo": "zona", "id": "praca" }
+   "foco": { "tipo": "zona", "id": "lanchonete" }
+  },
+  {
+   "id": "copa",
+   "nome": "Copa / Área de alimentação do térreo",
+   "emoji": "🍽️",
+   "onde": "Térreo, ala sul, entre a Sala UNISUAM (103) e os banheiros",
+   "status": "confirmado",
+   "desc": "Área de alimentação marcada na planta oficial do térreo, ao lado da Sala 103. Operadores do evento atendem por aqui.",
+   "cardapio": [],
+   "instagram": null,
+   "foco": { "tipo": "zona", "id": "restaurante" }
+  },
+  {
+   "id": "hidratacao",
+   "nome": "Ponto de hidratação",
+   "emoji": "💧",
+   "onde": "Piso superior, perto dos estandes de expositores (13)",
+   "status": "confirmado",
+   "desc": "Água gratuita no piso superior, marcada no mapa oficial do evento. Leve sua garrafa.",
+   "cardapio": [],
+   "instagram": null,
+   "foco": { "tipo": "poi", "id": "hidratacao" }
   },
   {
    "id": "mercado-sebrae",
    "nome": "Mercado Sebrae",
    "emoji": "🧺",
-   "onde": "Ala leste do pavilhão, ao lado da Praça de Alimentação",
+   "onde": "Piso superior, espaço 12, ao lado do acesso principal do lounge",
    "status": "confirmado",
-   "desc": "Vitrine de pequenos negócios fluminenses com venda direta do produtor: alimentos artesanais, doces, cafés especiais, além de moda, acessórios, beleza e artesanato. Ótimo para provar e levar produtos locais.",
+   "desc": "Vitrine de pequenos negócios fluminenses com venda direta do produtor: alimentos artesanais, doces, cafés especiais, além de moda, acessórios, beleza e artesanato.",
    "cardapio": [
     "Alimentos artesanais e doces regionais",
     "Cafés especiais de produtores do estado",
@@ -31,26 +53,15 @@
    "id": "mcdonalds",
    "nome": "McDonald's Riocentro",
    "emoji": "🍔",
-   "onde": "Dentro do complexo Riocentro, fora do pavilhão do Summit",
+   "onde": "Dentro do complexo Riocentro, fora do Centro de Convenções",
    "status": "confirmado",
-   "desc": "Unidade fixa do complexo, a poucos minutos a pé do Centro de Convenções. Alternativa rápida fora do pavilhão.",
+   "desc": "Unidade fixa do complexo, a poucos minutos a pé. Alternativa rápida fora do prédio do evento.",
    "cardapio": [
     "Lanches e combos",
     "McCafé: cafés e sobremesas"
    ],
    "instagram": "mcdonalds_br",
    "foco": { "tipo": "building", "id": "mcdonalds" }
-  },
-  {
-   "id": "operadores-dia",
-   "nome": "Operadores do dia (food trucks e balcões)",
-   "emoji": "🚚",
-   "onde": "Praça de Alimentação e pontos de apoio pelo pavilhão",
-   "status": "a confirmar",
-   "desc": "Lista de lojas e food trucks presentes hoje, com nome, cardápio e Instagram de cada um. Em levantamento no local: será preenchida ao longo do evento.",
-   "cardapio": [],
-   "instagram": null,
-   "foco": { "tipo": "zona", "id": "praca" }
   }
  ]
 }

@@ -31,69 +31,83 @@ const quad = (corners) => corners.map(([a, b]) => {
   return P(a, b);
 });
 
-// ---------------- layout representativo (ajustar com o mapa oficial do evento) ----------------
-// floor 0 = Terreo | floor 1 = 2o piso (Varanda e salas de conteudo; Sala Atitude
-// confirmada como Sala 203 C no video oficial do @sebraerj de 12/11/2026)
-// Distribuicao em faixas paralelas ao eixo N-S, com folga entre vizinhos para os rotulos.
+// ---------------- layout calibrado com o mapa oficial do evento ----------------
+// Fontes (fotos de 12/11/2026): "Mapa de localizacao - Piso Superior" do Summit e
+// "Planta baixa do terreo" do Riocentro. O predio e um QUADRADO rotacionado 45
+// graus: os lados da planta viram as faces do losango. Coordenadas (u, v) da
+// planta (u = oeste->leste, v = norte->sul, de -1 a 1, centro 0) convertem para
+// os eixos do losango por a = (u + v) / 2 e b = (v - u) / 2; os retangulos das
+// salas saem alinhados as paredes reais. |a|+|b| = max(|u|,|v|), entao manter
+// u, v dentro de [-0.9, 0.9] garante o interior do predio.
+const UV = (u, v) => P((u + v) / 2, (v - u) / 2);
+const QUV = (u0, v0, u1, v1) => [UV(u0, v0), UV(u1, v0), UV(u1, v1), UV(u0, v1)];
 const zones = [
-  // ===== TERREO =====
-  // ponta norte -> centro
-  { id: 'esp-startups', name: 'Startups', emoji: '🚀', type: 'espaco', floor: 0,
-    poly: quad([[-0.14, -0.76], [0.10, -0.76], [0.16, -0.62], [-0.20, -0.62]]) },
-  { id: 'esp-sebraelab', name: 'SebraeLab', emoji: '🧪', type: 'espaco', floor: 0,
-    poly: quad([[-0.34, -0.56], [-0.04, -0.56], [-0.04, -0.40], [-0.38, -0.40]]) },
-  { id: 'esp-gamesrj', name: 'Sebrae Games RJ', emoji: '🎮', type: 'espaco', floor: 0,
-    poly: quad([[0.02, -0.56], [0.30, -0.56], [0.36, -0.40], [0.02, -0.40]]) },
-  { id: 'esp-consult', name: 'Consultorias', emoji: '💼', type: 'espaco', floor: 0,
-    poly: quad([[-0.56, -0.32], [-0.30, -0.32], [-0.30, -0.16], [-0.60, -0.16]]) },
-  { id: 'esp-assessoria', name: 'Assessoria de Negócios', emoji: '🤝', type: 'espaco', floor: 0,
-    poly: quad([[-0.24, -0.34], [0.06, -0.34], [0.06, -0.16], [-0.24, -0.16]]) },
-  { id: 'esp-imersivas', name: 'Experiências Imersivas', emoji: '🥽', type: 'espaco', floor: 0,
-    poly: quad([[0.12, -0.34], [0.44, -0.34], [0.50, -0.16], [0.12, -0.16]]) },
-  // faixa central
+  // ===== TERREO (planta baixa oficial do Riocentro) =====
+  { id: 'futuro', name: 'Palco Futuro (Sala 101)', emoji: '🎤', type: 'sala', color: '#264D55', floor: 0,
+    poly: QUV(-0.72, -0.52, 0.28, 0.56) },
+  { id: 'foyer', name: 'Foyer', emoji: '🚪', type: 'espaco', floor: 0,
+    poly: QUV(0.36, -0.5, 0.75, 0.58) },
+  { id: 'unisuam', name: 'Sala UNISUAM (Sala 103)', emoji: '🎓', type: 'sala', color: '#B5485E', floor: 0,
+    poly: QUV(-0.68, 0.62, -0.28, 0.86) },
   { id: 'entrada-hall', name: 'Credenciamento', emoji: '🎫', type: 'servico', floor: 0,
-    poly: quad([[-0.74, -0.02], [-0.46, -0.02], [-0.46, 0.12], [-0.74, 0.12]]) },
-  { id: 'praca', name: 'Praça de Alimentação', emoji: '🍽️', type: 'alimentacao', floor: 0,
-    poly: quad([[-0.46, -0.08], [-0.06, -0.08], [-0.06, 0.14], [-0.46, 0.14]]) },
-  { id: 'mercado', name: 'Mercado Sebrae', emoji: '🧺', type: 'espaco', floor: 0,
-    poly: quad([[0.00, -0.08], [0.42, -0.08], [0.36, 0.16], [0.00, 0.16]]) },
-  { id: 'esp-verde', name: 'Área de Experiências', emoji: '🌿', type: 'espaco', floor: 0,
-    poly: quad([[0.48, -0.26], [0.74, -0.06], [0.60, 0.08], [0.44, -0.08]]) },
-  // ala sul
-  { id: 'esp-turismo', name: 'Turismo FIRJAN SENAC', emoji: '🧭', type: 'espaco', floor: 0,
-    poly: quad([[-0.70, 0.16], [-0.42, 0.16], [-0.36, 0.34], [-0.58, 0.34]]) },
-  { id: 'futuro', name: 'Palco Futuro', emoji: '🎤', type: 'sala', color: '#264D55', floor: 0,
-    poly: quad([[-0.40, 0.22], [0.40, 0.22], [0.10, 0.80], [-0.10, 0.80]]) },
-  // ===== 2o PISO =====
+    poly: QUV(0.5, 0.62, 0.74, 0.88) },
+  { id: 'lanchonete', name: 'Lanchonete', emoji: '☕', type: 'alimentacao', floor: 0,
+    poly: QUV(0.66, -0.88, 0.88, -0.66) },
+  { id: 'restaurante', name: 'Copa / Alimentação', emoji: '🍽️', type: 'alimentacao', floor: 0,
+    poly: QUV(-0.24, 0.62, -0.04, 0.82) },
+  // ===== PISO SUPERIOR (mapa oficial do Summit) =====
   { id: 'juridica', name: 'Sala Inovação Jurídica', emoji: '⚖️', type: 'sala', color: '#C98A2D', floor: 1,
-    poly: quad([[-0.34, -0.58], [-0.06, -0.58], [-0.06, -0.40], [-0.42, -0.40]]) },
-  { id: 'unisuam', name: 'Sala UNISUAM', emoji: '🎓', type: 'sala', color: '#B5485E', floor: 1,
-    poly: quad([[0.02, -0.60], [0.30, -0.60], [0.38, -0.40], [0.02, -0.40]]) },
-  { id: 'atitude', name: 'Sala Atitude (203 C)', emoji: '✊', type: 'sala', color: '#8A4FBF', floor: 1,
-    poly: quad([[-0.60, -0.30], [-0.16, -0.30], [-0.16, -0.10], [-0.60, -0.10]]) },
+    poly: QUV(-0.84, -0.55, -0.48, 0.3) },
   { id: 'canva', name: 'Sala CANVA', emoji: '🎨', type: 'sala', color: '#00A5B5', floor: 1,
-    poly: quad([[0.00, -0.30], [0.44, -0.30], [0.52, -0.10], [0.00, -0.10]]) },
-  { id: 'varanda', name: 'Varanda', emoji: '🏪', type: 'espaco', floor: 1,
-    poly: quad([[-0.80, -0.02], [-0.26, -0.02], [-0.26, 0.12], [-0.80, 0.12]]) },
-  { id: 'vao', name: 'Vão livre (vista do térreo)', emoji: '', type: 'vao', floor: 1,
-    poly: quad([[-0.30, 0.20], [0.30, 0.20], [0.08, 0.70], [-0.08, 0.70]]) },
+    poly: QUV(-0.66, 0.4, -0.06, 0.78) },
+  { id: 'atitude', name: 'Sala Atitude (203 C)', emoji: '✊', type: 'sala', color: '#8A4FBF', floor: 1,
+    poly: QUV(0.46, -0.55, 0.82, 0.32) },
+  { id: 'esp2', name: 'Assessoria de Negócios (2)', emoji: '🤝', type: 'espaco', floor: 1,
+    poly: QUV(-0.34, -0.8, -0.06, -0.66) },
+  { id: 'esp1', name: 'SebraeLab (1)', emoji: '🧪', type: 'espaco', floor: 1,
+    poly: QUV(-0.38, -0.62, -0.1, -0.48) },
+  { id: 'esp3', name: 'DETRAN (3)', emoji: '🪪', type: 'parceiro', floor: 1,
+    poly: QUV(-0.02, -0.86, 0.24, -0.7) },
+  { id: 'esp4', name: 'Sebrae Games (4)', emoji: '🎮', type: 'espaco', floor: 1,
+    poly: QUV(-0.38, -0.42, -0.2, -0.28) },
+  { id: 'esp5', name: 'Startups (5)', emoji: '🚀', type: 'espaco', floor: 1,
+    poly: QUV(-0.14, -0.52, 0.12, -0.3) },
+  { id: 'esp6', name: 'Turismo Sebrae (6)', emoji: '🧭', type: 'espaco', floor: 1,
+    poly: QUV(0.16, -0.6, 0.32, -0.46) },
+  { id: 'esp7', name: 'Experiências Imersivas (7)', emoji: '🥽', type: 'espaco', floor: 1,
+    poly: QUV(-0.2, 0.0, -0.04, 0.16) },
+  { id: 'esp8', name: 'UNISUAM (8)', emoji: '🎓', type: 'parceiro', floor: 1,
+    poly: QUV(-0.06, -0.1, 0.1, 0.06) },
+  { id: 'esp9', name: 'Consultoria (9)', emoji: '💼', type: 'espaco', floor: 1,
+    poly: QUV(0.08, -0.2, 0.24, -0.04) },
+  { id: 'esp10', name: 'SENAC (10)', emoji: '📚', type: 'parceiro', floor: 1,
+    poly: QUV(0.22, -0.3, 0.38, -0.14) },
+  { id: 'esp11', name: 'FIRJAN (11)', emoji: '🏭', type: 'parceiro', floor: 1,
+    poly: QUV(0.3, -0.44, 0.44, -0.28) },
+  { id: 'mercado', name: 'Mercado Sebrae (12)', emoji: '🧺', type: 'espaco', floor: 1,
+    poly: QUV(0.04, 0.42, 0.34, 0.66) },
+  { id: 'esp13', name: 'Estandes de expositores (13)', emoji: '🏪', type: 'parceiro', floor: 1,
+    poly: QUV(0.4, 0.4, 0.68, 0.62) },
 ];
 
 const pois = [
   // terreo
-  { id: 'entrada', name: 'Entrada principal', type: 'entrada', floor: 0, at: P(-0.90, 0.03) },
-  { id: 'escada-t', name: 'Escada rolante (salas no 2º piso)', type: 'escada', floor: 0, at: P(-0.70, 0.14) },
-  { id: 'wc-norte', name: 'Banheiros (ala norte)', type: 'banheiro', floor: 0, at: P(0.00, -0.90) },
-  { id: 'wc-oeste', name: 'Banheiros (centro, lado oeste)', type: 'banheiro', floor: 0, at: P(-0.26, 0.26) },
-  { id: 'wc-leste', name: 'Banheiros (lado leste)', type: 'banheiro', floor: 0, at: P(0.62, 0.14) },
-  { id: 'wc-sul', name: 'Banheiros (fundo do Palco Futuro)', type: 'banheiro', floor: 0, at: P(-0.16, 0.74) },
-  // 2o piso
-  { id: 'escada-2p', name: 'Escada rolante (descer para o térreo)', type: 'escada', floor: 1, at: P(-0.70, 0.16) },
-  { id: 'wc-2p', name: 'Banheiros (2º piso)', type: 'banheiro', floor: 1, at: P(0.00, -0.72) },
+  { id: 'entrada-ne', name: 'Entrada nordeste (estacionamento)', type: 'entrada', floor: 0, at: UV(0.84, -0.6) },
+  { id: 'entrada-se', name: 'Entrada sudeste (credenciamento)', type: 'entrada', floor: 0, at: UV(0.84, 0.72) },
+  { id: 'escada-foyer', name: 'Escadas para o piso superior', type: 'escada', floor: 0, at: UV(0.5, 0.52) },
+  { id: 'elevadores-t', name: 'Elevadores', type: 'escada', floor: 0, at: UV(0.76, -0.56) },
+  { id: 'wc-103', name: 'Banheiros (junto à Sala 103)', type: 'banheiro', floor: 0, at: UV(-0.1, 0.76) },
+  { id: 'wc-cred', name: 'Banheiros (credenciamento)', type: 'banheiro', floor: 0, at: UV(0.42, 0.76) },
+  // piso superior
+  { id: 'escada-p1', name: 'Escadas para o térreo (lounge de entrada)', type: 'escada', floor: 1, at: UV(0.56, 0.68) },
+  { id: 'elevadores-p1', name: 'Elevadores / acesso PCD', type: 'escada', floor: 1, at: UV(0.76, -0.58) },
+  { id: 'wc-p1a', name: 'Banheiros (lado leste)', type: 'banheiro', floor: 1, at: UV(0.42, -0.06) },
+  { id: 'wc-p1b', name: 'Banheiros (centro-sul)', type: 'banheiro', floor: 1, at: UV(0.08, 0.28) },
+  { id: 'hidratacao', name: 'Ponto de hidratação', type: 'agua', floor: 1, at: UV(0.32, 0.3) },
 ];
 
 const out = {
-  note: 'Layout interno representativo, ancorado no poligono real do CINCO (OSM). Ajustar com o mapa oficial do evento.',
+  note: 'Layout calibrado com o mapa oficial do Piso Superior do Summit e a planta baixa do terreo do Riocentro (fotos de 12/11/2026), ancorado no poligono real do CINCO (OSM).',
   axes: { C, AX, BX },
   zones,
   pois,
@@ -104,4 +118,4 @@ const R = 111320, cosLat = Math.cos(-22.9786 * Math.PI / 180);
 const d = (p, q) => Math.hypot((q[0] - p[0]) * R, (q[1] - p[1]) * R * cosLat);
 console.log('zonas:', zones.length, '| pois:', pois.length);
 console.log('eixo W-E (m):', Math.round(d(W, E)), '| eixo N-S (m):', Math.round(d(N, S)));
-console.log('Palco Futuro aprox (m2):', Math.round(d(P(-0.42, 0.22), P(0.42, 0.22)) * d(P(0, 0.22), P(0, 0.82))));
+console.log('Palco Futuro (Sala 101) aprox (m2):', Math.round(d(UV(-0.72, -0.52), UV(0.28, -0.52)) * d(UV(-0.72, -0.52), UV(-0.72, 0.56))));
