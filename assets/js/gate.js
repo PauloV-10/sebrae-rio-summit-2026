@@ -5,6 +5,10 @@
 (function () {
   'use strict';
 
+  /* Portão desligado em 12/11 a pedido do Paulo: acesso livre durante o
+     Summit. Para religar a trava por código, basta voltar para true. */
+  var GATE_ATIVO = false;
+
   var PORTAL = 'https://script.google.com/macros/s/AKfycbyGk9kHt1Je_ESMqXR6pdCVfjYaO26vXeRpSKbN9Lu_SqAVMrSy0l05FEV_an0O6nBGSw/exec';
   var FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeWYYWSLhJPtqj_2kPcZCWcyHw_qrSdKv2_1jigUK0O81QaEQ/viewform';
   var KEY_PASS = 'srs26_pass';
@@ -107,6 +111,8 @@
     });
     inp.focus();
   }
+
+  if (!GATE_ATIVO) { libera(); return; } /* acesso livre */
 
   var pass = null;
   try { pass = localStorage.getItem(KEY_PASS); } catch (e) {}

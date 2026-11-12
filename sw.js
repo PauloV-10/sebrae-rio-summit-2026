@@ -1,6 +1,6 @@
 /* Service worker: deixa o guia rápido e utilizável mesmo com internet fraca no pavilhão.
    Estratégia: rede primeiro para dados (JSON), cache primeiro para o restante. */
-const VERSION = 'srs26-v6';
+const VERSION = 'srs26-v7';
 const CORE = [
   './',
   'index.html',
