@@ -64,7 +64,7 @@
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'room-chip' + (state.hidden.has(r.id) ? ' off' : '');
-      chip.innerHTML = `<span class="dot" style="background:${r.color}"></span>${esc(r.short)}`;
+      chip.innerHTML = `<span class="dot" style="background:${r.color}"></span>${r.emoji || ''} ${esc(r.short)}`;
       chip.addEventListener('click', () => {
         if (state.hidden.has(r.id)) state.hidden.delete(r.id); else state.hidden.add(r.id);
         renderFilters(); renderGrid();
@@ -89,7 +89,7 @@
     const day = state.data.days.find((d) => d.date === state.day);
 
     tl.innerHTML = '';
-    tl.style.gridTemplateColumns = `52px repeat(${rooms.length}, minmax(172px, 1fr))`;
+    tl.style.gridTemplateColumns = `var(--tl-gutter) repeat(${rooms.length}, minmax(0, 1fr))`;
 
     if (!rooms.length) { tl.innerHTML = '<div class="tl-empty">Nenhuma sala selecionada. Ative uma sala nos filtros acima.</div>'; return; }
 
@@ -101,8 +101,8 @@
       const th = document.createElement('div');
       th.className = 'tl-head';
       th.style.background = r.color;
-      th.textContent = r.short;
-      th.title = r.name;
+      th.innerHTML = `<span class="th-emoji">${r.emoji || ''}</span><span class="th-name">${esc(r.short)}</span>`;
+      th.title = r.name + (r.local ? ' (' + r.local + ')' : '');
       tl.appendChild(th);
     });
 
@@ -181,7 +181,7 @@
     const headH = tl.querySelector('.tl-head') ? tl.querySelector('.tl-head').offsetHeight : 36;
     const line = document.createElement('div');
     line.className = 'now-line';
-    line.style.left = '52px';
+    line.style.left = 'var(--tl-gutter)';
     line.style.right = '0';
     line.style.top = (headH + ((m - start) / 60) * HOUR_PX) + 'px';
     tl.appendChild(line);
@@ -206,7 +206,7 @@
       '<p class="muted">Detalhes desta atividade serão divulgados pelo evento.</p>';
     box.innerHTML =
       media +
-      `<span class="sheet-roomchip" style="background:${room.color}">${esc(room.name)}${room.local ? ' · ' + esc(room.local) : ''}</span>` +
+      `<span class="sheet-roomchip" style="background:${room.color}">${room.emoji ? room.emoji + ' ' : ''}${esc(room.name)}${room.local ? ' · ' + esc(room.local) : ''}</span>` +
       `<div class="sheet-time">🕐 ${t.start} às ${t.end}</div>` +
       `<h2 class="sheet-title" id="sheet-title">${esc(t.title)}</h2>` +
       (t.speakers ? `<div class="sheet-speakers">🎤 ${esc(t.speakers)}</div>` : '') +

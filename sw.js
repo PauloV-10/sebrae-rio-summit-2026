@@ -1,6 +1,6 @@
 /* Service worker: deixa o guia rápido e utilizável mesmo com internet fraca no pavilhão.
    Estratégia: rede primeiro para dados (JSON), cache primeiro para o restante. */
-const VERSION = 'srs26-v2';
+const VERSION = 'srs26-v3';
 const CORE = [
   './',
   'index.html',
@@ -19,6 +19,8 @@ const CORE = [
   'manifest.webmanifest',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',
+  'assets/brand/portes-p.png',
+  'assets/brand/portes-logo-full.png',
 ];
 
 self.addEventListener('install', (e) => {

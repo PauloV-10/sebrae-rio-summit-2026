@@ -16,7 +16,10 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">
-      <span class="brand-mark">SRS</span>
+      <button id="menu-btn" class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+      <span class="brand-logo"><img src="assets/brand/portes-p.png" alt="Portes"></span>
       <div class="brand-text">
         <strong>Sebrae Rio Summit 2026</strong>
         <small>10 a 12/11 &middot; Riocentro &middot; Guia Portes</small>
@@ -26,12 +29,34 @@
   </div>
 </header>
 
+<div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+<nav id="drawer" class="drawer" aria-label="Menu principal">
+  <div class="drawer-head">
+    <img src="assets/brand/portes-logo-full.png" alt="Portes Contabilidade">
+    <small>Guia do Sebrae Rio Summit 2026</small>
+  </div>
+  <div class="drawer-nav">
+    <a href="#agenda" data-view="agenda"><span class="d-emoji">📅</span> Agenda das salas</a>
+    <a href="#mapa" data-view="mapa"><span class="d-emoji">🗺️</span> Mapa do evento</a>
+    <a href="#comida" data-view="comida"><span class="d-emoji">🍽️</span> Alimentação</a>
+    <a href="#portes" data-view="portes"><span class="d-emoji">🤝</span> Fale com a Portes</a>
+  </div>
+  <div class="drawer-sep"></div>
+  <div class="drawer-nav">
+    <a href="https://sebraeriosummit.com.br" target="_blank" rel="noopener"><span class="d-emoji">🌐</span> Site oficial do Summit</a>
+    <a href="https://www.instagram.com/sebraerj" target="_blank" rel="noopener"><span class="d-emoji">📸</span> @sebraerj</a>
+  </div>
+  <div class="drawer-foot">
+    <small>Feito pelo Grupo Portes &middot; Contabilidade &amp; Soluções &middot; Macaé/RJ</small>
+  </div>
+</nav>
+
 <main id="main">
 
   <!-- ===================== AGENDA ===================== -->
   <section id="view-agenda" class="view" hidden>
     <div class="view-head">
-      <h1>Agenda das salas</h1>
+      <h1>📅 Agenda das salas</h1>
       <p class="muted">Toque em uma palestra para ver detalhes, palestrantes e a sala no mapa.</p>
     </div>
     <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Dias do evento"></div>
@@ -44,7 +69,7 @@
   <!-- ===================== MAPA ===================== -->
   <section id="view-mapa" class="view" hidden>
     <div class="view-head">
-      <h1>Mapa do evento</h1>
+      <h1>🗺️ Mapa do evento</h1>
       <p class="muted">Centro de Convenções do Riocentro. Ative a localização para ver onde você está.</p>
     </div>
     <div class="map-toolbar">
@@ -63,7 +88,7 @@
   <!-- ===================== ALIMENTAÇÃO ===================== -->
   <section id="view-comida" class="view" hidden>
     <div class="view-head">
-      <h1>Alimentação</h1>
+      <h1>🍽️ Alimentação</h1>
       <p class="muted">Onde comer dentro e ao redor do evento.</p>
     </div>
     <div id="food-list" class="food-list"></div>
@@ -72,16 +97,20 @@
   <!-- ===================== PORTES ===================== -->
   <section id="view-portes" class="view" hidden>
     <div class="portes-hero">
-      <div class="portes-logo">PORTES</div>
-      <div class="portes-tag">Contabilidade &amp; Soluções &middot; Macaé/RJ</div>
+      <span class="portes-logo-plate"><img src="assets/brand/portes-logo-full.png" alt="Portes Contabilidade"></span>
+      <div class="portes-tag">Grupo Portes &middot; Contabilidade &amp; Soluções &middot; Macaé/RJ</div>
     </div>
     <div class="qr-card">
-      <h2>Agende sua consultoria</h2>
-      <p>Aponte a câmera do celular para o QR Code e fale direto com o nosso comercial no WhatsApp.</p>
-      <div id="qr-box" class="qr-box" role="img" aria-label="QR Code para WhatsApp do comercial da Portes"></div>
-      <p class="qr-msg">A mensagem já vai pronta:<br><em id="qr-msg-text"></em></p>
+      <h2>🤝 Agende sua consultoria</h2>
+      <p>Aponte a câmera do celular para o QR Code: a conversa abre no WhatsApp do nosso comercial com a mensagem pronta, é só enviar.</p>
+      <div id="qr-box" class="qr-box" role="img" aria-label="QR Code para WhatsApp do comercial da Portes">
+        <span class="qr-logo-plate"><img src="assets/brand/portes-logo-full.png" alt="Portes"></span>
+      </div>
+      <a id="wa-row" class="wa-row" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        <span>Acesse o QR Code ou clique aqui</span>
+      </a>
       <div class="qr-actions">
-        <a id="btn-whats" class="btn btn-whats" href="#" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
         <button id="btn-copy" class="btn" type="button">🔗 Copiar link</button>
       </div>
     </div>

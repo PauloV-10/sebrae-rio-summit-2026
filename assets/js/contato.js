@@ -1,4 +1,4 @@
-/* Contato Portes: QR Code para o WhatsApp do comercial com mensagem pronta. */
+/* Contato Portes: QR Code (com a logo no centro) para o WhatsApp do comercial. */
 (function () {
   'use strict';
 
@@ -16,18 +16,20 @@
   function init() {
     const url = `https://wa.me/${FONE}?text=${encodeURIComponent(MENSAGEM)}`;
 
-    document.querySelector('#qr-msg-text').textContent = `"${MENSAGEM}"`;
-    document.querySelector('#btn-whats').href = url;
+    document.querySelector('#wa-row').href = url;
 
-    // QR em SVG (vendor/qrcode.js define a global `qrcode`)
+    // QR em SVG com correção de erro alta (H) para aceitar a logo central
     try {
-      const qr = qrcode(0, 'M');
+      const qr = qrcode(0, 'H');
       qr.addData(url);
       qr.make();
-      document.querySelector('#qr-box').innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+      const box = document.querySelector('#qr-box');
+      box.insertAdjacentHTML('afterbegin', qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true }));
     } catch (e) {
-      document.querySelector('#qr-box').innerHTML =
-        '<p class="muted">Não foi possível gerar o QR Code. Use o botão abaixo.</p>';
+      const plate = document.querySelector('.qr-logo-plate');
+      if (plate) plate.hidden = true;
+      document.querySelector('#qr-box').insertAdjacentHTML('afterbegin',
+        '<p class="muted">Não foi possível gerar o QR Code. Use o botão verde abaixo.</p>');
     }
 
     document.querySelector('#btn-copy').addEventListener('click', async () => {

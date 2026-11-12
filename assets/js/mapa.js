@@ -135,9 +135,9 @@
     // zonas internas, agrupadas por andar
     interior.zones.forEach((z) => {
       const g = gFloors[z.floor || 0];
-      const attrs = { points: polyPts(z.poly), 'data-zone': z.id, 'data-floor': z.floor || 0 };
+      const attrs = { points: polyPts(z.poly), 'data-zone': z.id, 'data-floor': z.floor || 0, rx: 1 };
       if (z.type === 'sala') {
-        attrs.fill = hexA(z.color || '#264D55', 0.18);
+        attrs.fill = hexA(z.color || '#264D55', 0.16);
         attrs.stroke = z.color || '#264D55';
         attrs['stroke-width'] = '1';
       } else {
@@ -146,7 +146,12 @@
       g.appendChild(el('polygon', attrs));
       const [cx, cy] = centroid(z.poly);
       const sala = z.type === 'sala';
-      wrapLabel(g, z.name, cx, cy + 2, 'map-label' + (sala ? '' : ' lbl-espaco'), sala ? 15 : 12);
+      if (z.emoji) {
+        const em = el('text', { x: cx, y: cy - 2.6, class: 'map-emoji' });
+        em.textContent = z.emoji;
+        g.appendChild(em);
+      }
+      wrapLabel(g, z.name, cx, cy + (z.emoji ? 4.6 : 2), 'map-label' + (sala ? '' : ' lbl-espaco'), sala ? 12 : 13);
     });
 
     // pontos de interesse, por andar

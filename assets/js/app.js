@@ -8,9 +8,10 @@
     if (!VIEWS.includes(name)) name = 'agenda';
     VIEWS.forEach((v) => {
       document.querySelector(`#view-${v}`).hidden = (v !== name);
-      document.querySelectorAll(`.nav-item[data-view="${v}"]`)
+      document.querySelectorAll(`.nav-item[data-view="${v}"], .drawer-nav a[data-view="${v}"]`)
         .forEach((a) => a.classList.toggle('active', v === name));
     });
+    closeDrawer();
     if (name === 'mapa' && window.Mapa && window.Mapa._inited) {
       // o SVG precisa de medidas reais do frame para encaixar o viewBox
       requestAnimationFrame(() => window.Mapa.refitIfNeeded && window.Mapa.refitIfNeeded());
@@ -20,6 +21,29 @@
 
   function route() {
     showView((location.hash || '#agenda').slice(1));
+  }
+
+  // ---------- menu lateral ----------
+  function openDrawer() {
+    document.querySelector('#drawer').classList.add('open');
+    document.querySelector('#drawer-backdrop').hidden = false;
+    document.querySelector('#menu-btn').setAttribute('aria-expanded', 'true');
+  }
+  function closeDrawer() {
+    const d = document.querySelector('#drawer');
+    if (!d) return;
+    d.classList.remove('open');
+    document.querySelector('#drawer-backdrop').hidden = true;
+    document.querySelector('#menu-btn').setAttribute('aria-expanded', 'false');
+  }
+  function bindDrawer() {
+    document.querySelector('#menu-btn').addEventListener('click', () => {
+      const open = document.querySelector('#drawer').classList.contains('open');
+      if (open) closeDrawer(); else openDrawer();
+    });
+    document.querySelector('#drawer-backdrop').addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+    document.querySelectorAll('.drawer-nav a[data-view]').forEach((a) => a.addEventListener('click', closeDrawer));
   }
 
   function liveChip() {
@@ -35,6 +59,7 @@
   async function boot() {
     window.addEventListener('hashchange', route);
     liveChip();
+    bindDrawer();
 
     try {
       const [agenda, osm, interior, comida] = await Promise.all([
