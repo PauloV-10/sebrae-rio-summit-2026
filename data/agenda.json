@@ -1,0 +1,1300 @@
+{
+ "event": {
+  "name": "Sebrae Rio Summit 2026",
+  "dates": "10 a 12 de novembro de 2026",
+  "hours": "10h às 19h",
+  "venue": "Centro de Convenções do Riocentro",
+  "address": "Av. Salvador Allende, 6555, Barra Olímpica, Rio de Janeiro - RJ",
+  "site": "https://sebraeriosummit.com.br",
+  "instagram": "https://www.instagram.com/sebraerj",
+  "gridStart": "10:00",
+  "gridEnd": "19:00"
+ },
+ "rooms": [
+  {
+   "id": "futuro",
+   "name": "Palco Futuro",
+   "short": "Futuro",
+   "color": "#264D55",
+   "cap": 3000
+  },
+  {
+   "id": "atitude",
+   "name": "Sala Atitude",
+   "short": "Atitude",
+   "color": "#8A4FBF",
+   "cap": 500
+  },
+  {
+   "id": "canva",
+   "name": "Sala CANVA",
+   "short": "CANVA",
+   "color": "#00A5B5",
+   "cap": 500
+  },
+  {
+   "id": "juridica",
+   "name": "Sala Inovação Jurídica",
+   "short": "Inovação Jurídica",
+   "color": "#C98A2D",
+   "cap": 500
+  },
+  {
+   "id": "unisuam",
+   "name": "Sala UNISUAM",
+   "short": "UNISUAM",
+   "color": "#B5485E",
+   "cap": 500
+  }
+ ],
+ "days": [
+  {
+   "date": "2026-11-10",
+   "label": "10/11 - Terça-feira",
+   "talks": [
+    {
+     "id": "10-futuro-1000",
+     "room": "futuro",
+     "start": "10:00",
+     "end": "11:00",
+     "title": "Abertura",
+     "speakers": "",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-unisuam-1000",
+     "room": "unisuam",
+     "start": "10:00",
+     "end": "11:00",
+     "title": "O Impacto da IA na Formação Profissional - reflexões sobre como a inteligência artificial está remodelando as competências do futuro",
+     "speakers": "Arapuan Motta (Reitor - UNISUAM) e Luiz Coelho",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-canva-1100",
+     "room": "canva",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Atitude é pra quem tem cara de pau",
+     "speakers": "Bruno Uau",
+     "desc": "Palestrante, Mestre de Cerimônias, Estrategista de Experiências Humanas e Conselheiro Executivo. Bruno Gonçalves é reconhecido no mercado como um dos profissionais mais originais e provocadores nas áreas de Experiência do Cliente, Experiência do Colaborador, Cultura Organizacional e Felicidade Corporativa. Engenheiro com extensão na França, formação em Comunicação pela Universidade de Toronto e especialização no Disney Institute, combina conteúdo técnico sólido, comunicação clara e conexão emocional com o público.",
+     "img": "assets/palestrantes/bruno-uau.jpg"
+    },
+    {
+     "id": "10-juridica-1100",
+     "room": "juridica",
+     "start": "11:00",
+     "end": "12:10",
+     "title": "A Advocacia na era da Inteligência Artificial",
+     "speakers": "Erick Navarro",
+     "desc": "",
+     "img": "assets/palestrantes/whatsapp-image-2026-11-07-at-14-24-25.jpg"
+    },
+    {
+     "id": "10-unisuam-1100",
+     "room": "unisuam",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Contabilidade 4.0: Navegando as Inovações da IA no Universo Contábil e Financeiro - automação, análise de dados e IA no setor financeiro e contábil",
+     "speakers": "Prof. Anibal Ribeiro de Figueiredo (Professor - UNISUAM), Jansen Heringer (Co-Partner na Heringer & Matos) e Hugo Cardozo (Professor - UNISUAM)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1120",
+     "room": "futuro",
+     "start": "11:20",
+     "end": "12:10",
+     "title": "O caminho da vitória",
+     "speakers": "Bernardinho",
+     "desc": "Um dos maiores nomes do voleibol mundial, Bernardinho construiu uma trajetória vitoriosa como atleta e treinador. Com passagens à frente das seleções brasileiras masculina e feminina e conquistas de títulos olímpicos e mundiais, tornou-se referência em liderança, gestão de equipes e desenvolvimento de talentos. Palestrante e empreendedor, conecta sua experiência no esporte aos desafios dos negócios, compartilhando aprendizados sobre alta performance, trabalho em equipe, superação de desafios e formação de líderes.",
+     "img": "assets/palestrantes/bernadinho.jpg"
+    },
+    {
+     "id": "10-canva-1200",
+     "room": "canva",
+     "start": "12:00",
+     "end": "12:30",
+     "title": "Infoprodutos: Crie, Venda e Lucre Online com o Canva",
+     "speakers": "Suzana Winkel",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1210",
+     "room": "futuro",
+     "start": "12:10",
+     "end": "13:00",
+     "title": "Inteligência Emocional: A Competência que Está Moldando o Futuro",
+     "speakers": "Elisama Santos",
+     "desc": "Escritora, psicanalista, palestrante e apresentadora, referência no Brasil em comunicação não violenta, educação emocional e parentalidade. É autora de best-sellers como Educação não violenta, Por que gritamos? e Conversas corajosas, além de outros livros de ficção e literatura infantil. Também apresenta o programa SAC das Emoções, no GNT, e já participou do TEDxRio.",
+     "img": "assets/palestrantes/elisama-santos-foto-3-4.jpg"
+    },
+    {
+     "id": "10-juridica-1210",
+     "room": "juridica",
+     "start": "12:10",
+     "end": "12:45",
+     "title": "Talk: Convênio SEBRAE/RJ e OAB/RJ: Crescer de Forma Sustentável",
+     "speakers": "Daniel Gigante / Ana Tereza Basilio / Emilia Garcez / Thiago Bouza",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-canva-1230",
+     "room": "canva",
+     "start": "12:30",
+     "end": "13:00",
+     "title": "Acelere seus resultados com o tráfego pago",
+     "speakers": "Roger Abrantes",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1245",
+     "room": "juridica",
+     "start": "12:45",
+     "end": "13:45",
+     "title": "Talk: Al Law Firm: O Mercado Jurídico em Transformação",
+     "speakers": "Tayná Cameiro",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-canva-1300",
+     "room": "canva",
+     "start": "13:00",
+     "end": "13:30",
+     "title": "Como criar apresentações, vídeos e materiais visuais no Canva",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1300",
+     "room": "futuro",
+     "start": "13:00",
+     "end": "13:50",
+     "title": "Gente Feliz dá lucro e não enche o saco",
+     "speakers": "Bruno UAU",
+     "desc": "Palestrante, Mestre de Cerimônias, Estrategista de Experiências Humanas e Conselheiro Executivo. Bruno Gonçalves é reconhecido no mercado como um dos profissionais mais originais e provocadores nas áreas de Experiência do Cliente, Experiência do Colaborador, Cultura Organizacional e Felicidade Corporativa. Engenheiro com extensão na França, formação em Comunicação pela Universidade de Toronto e especialização no Disney Institute, combina conteúdo técnico sólido, comunicação clara e conexão emocional com o público.",
+     "img": "assets/palestrantes/bruno-uau.jpg"
+    },
+    {
+     "id": "10-atitude-1320",
+     "room": "atitude",
+     "start": "13:20",
+     "end": "14:20",
+     "title": "Painel IA para Impulsionar Negócios: Potencialidades e Oportunidades",
+     "speakers": "Professor Alessandro Prudêncio Lukosevicius / Professor Giovani Capucho / Professor Wagner Ribeiro / Mediação: Antonio Kronemberger",
+     "desc": "Como a inteligência artificial pode ajudar micro e pequenas empresas a vender mais, atender melhor e ganhar produtividade? Com a participação de Alessandro Prudêncio Lukosevicius, doutor, professor de MBA e especialista em projetos e IA aplicada aos negócios; Giovani Capucho, coordenador do MBA em IA e Data Analytics para Negócios da Faculdade Senac; e Wagner Ribeiro, gerente de Tecnologia da Informação do Sebrae RJ. Um encontro sobre oportunidades, primeiros passos e tendências da IA para os pequenos negócios. Mediação de Antonio Carlos Kronemberger, gerente de Educação do Sebrae RJ.",
+     "img": null
+    },
+    {
+     "id": "10-canva-1330",
+     "room": "canva",
+     "start": "13:30",
+     "end": "14:00",
+     "title": "Novidades Canva 2026: os Recursos que Vão Turbinar seu Negócio",
+     "speakers": "Suzana",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1350",
+     "room": "futuro",
+     "start": "13:50",
+     "end": "14:40",
+     "title": "Os sete pilares das vendas",
+     "speakers": "Fábio Oliveira",
+     "desc": "Fundador da MasterDoc e do Sales Clube, além de ex-CEO da SalesFarm, Fábio Oliveira é uma das referências brasileiras em performance comercial. Com ampla experiência na estruturação de equipes de alta performance, seus conteúdos unem estratégia, processos e execução para ajudar empresas a construírem máquinas de vendas previsíveis, escaláveis e orientadas a resultados.",
+     "img": "assets/palestrantes/foto-fabio-oliveira.jpg"
+    },
+    {
+     "id": "10-canva-1400",
+     "room": "canva",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Qual o próximo movimento da sua carreira?",
+     "speakers": "Ticyana Arnaud",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1400",
+     "room": "juridica",
+     "start": "14:00",
+     "end": "14:35",
+     "title": "Talk: Como o Jurídico Corporativo e Escritórios estão Tratando a IA",
+     "speakers": "Erik Nybo",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-unisuam-1400",
+     "room": "unisuam",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Profissional do Futuro: Habilidades Essenciais em IA e Engenharia de Prompt - competências práticas para mercados impulsionados pela tecnologia e visão computacional",
+     "speakers": "Fábio Seixas (CEO Sof.to), Marlon Reis (UNISUAM) e Christian Sansoldo (Head of People Development na Softo)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-atitude-1420",
+     "room": "atitude",
+     "start": "14:20",
+     "end": "15:10",
+     "title": "Painel Mulheres que transformam negócios: empreendedorismo feminino, liderança, inovação e superação",
+     "speakers": "Indiara Bender / Monica Simas / Maria Albuquerque / Silvana Louro (Mediação Carla Panisset)",
+     "desc": "O que acontece quando mulheres transformam desafios em oportunidades para empreender, liderar e inovar? Com a participação de Indiara Bender, CEO do Grupo Bender; Monica Simas, mentora e consultora; Maria Albuquerque, empresária, escritora e palestrante; e Silvana Louro, fundadora da Equal Moda Inclusiva. Um encontro sobre empreendedorismo, liderança, superação e impacto. Mediação de Carla Panisset, gerente de Empreendedorismo Social e Feminino do Sebrae RJ.",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1435",
+     "room": "juridica",
+     "start": "14:35",
+     "end": "15:10",
+     "title": "Talk: Sem Gestão, nem a Melhor Tecnologia Resolve",
+     "speakers": "Fernando Xavier",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1440",
+     "room": "futuro",
+     "start": "14:40",
+     "end": "15:30",
+     "title": "O que ninguém te contou sobre o que vem pela frente",
+     "speakers": "Fred Alecrim",
+     "desc": "Sobre o Tema\n\nTexto sobre a palestra \"Descubra cinco estratégias práticas para criar conteúdos mais autênticos, relevantes e conectados com o seu público. A palestra mostra como fortalecer a comunicação, gerar identificação e produzir materiais que aumentem o engajamento e a credibilidade da sua marca. \"\n\nPalestrante\n\nPalestrante, escritor e especialista em comportamento e produtividade, Fred Alecrim é conhecido como “ativador de pessoas”. Em suas apresentações, une entretenimento, energia e conteúdo prático para estimular mudanças de comportamento e aprimorar o desempenho profissional.",
+     "img": "assets/palestrantes/fred-alecrim.jpg"
+    },
+    {
+     "id": "10-canva-1500",
+     "room": "canva",
+     "start": "15:00",
+     "end": "15:30",
+     "title": "Como criar apresentações, vídeos e materiais visuais no Canva 2",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-unisuam-1500",
+     "room": "unisuam",
+     "start": "15:00",
+     "end": "16:00",
+     "title": "Posicionamento Digital e Otimização do LinkedIn com IA - marca pessoal digital e uso estratégico do LinkedIn para ser encontrado por recrutadores",
+     "speakers": "Laura Isahu e Bruno Cruz",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-atitude-1510",
+     "room": "atitude",
+     "start": "15:10",
+     "end": "15:50",
+     "title": "Workshop Como vender na Shein",
+     "speakers": "Thiago Farhat",
+     "desc": "Especialista em e-commerce e expansão de marketplaces, Thiago lidera a estratégia de parcerias da SHEIN no Brasil.",
+     "img": "assets/palestrantes/foto-thiago-farhat-1.jpg"
+    },
+    {
+     "id": "10-juridica-1510",
+     "room": "juridica",
+     "start": "15:10",
+     "end": "15:55",
+     "title": "Painel: Do Legal Ops ao Al-First: Reorganizar o Trabalho, Liderar a Mudança e Entregar Resultado",
+     "speakers": "Thiago Schütz / Gustavo Potrick / Aislan Antunes / Graziela Bonfim",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-canva-1530",
+     "room": "canva",
+     "start": "15:30",
+     "end": "16:00",
+     "title": "Construa sua marca no Canva: Logo, Paleta e Identidade do Zero",
+     "speakers": "Fabi Pincinato",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1530",
+     "room": "futuro",
+     "start": "15:30",
+     "end": "16:10",
+     "title": "Do Zero ao Primeiro Pedido: Como Vender no Mercado Livre",
+     "speakers": "André Santos",
+     "desc": "Embaixador do Mercado Livre; Especialista em e-commerce; Professor; Autor; Palestrante; Mentor de empreendedores; Formação em Marketing e Vendas pela FGV.",
+     "img": "assets/palestrantes/andre-santos-3-1.jpg"
+    },
+    {
+     "id": "10-atitude-1550",
+     "room": "atitude",
+     "start": "15:50",
+     "end": "17:00",
+     "title": "Painel Juros, inflação e crédito: como navegar em diferentes cenários econômicos",
+     "speakers": "João Aveiro (BTG), Marcos Mendes- Mediação: Sthefanny Araújo",
+     "desc": "Como juros, inflação e acesso ao crédito impactam as decisões de quem empreende? Com a participação de João Aveiro, economista sênior do BTG Pactual, mestre em Economia pela EPGE/FGV Rio e com duas décadas de experiência no mercado financeiro, e Marcos Mendes, economista da Coordenação de Capitalização e Serviços Financeiros do Sebrae RJ. Um bate-papo para compreender diferentes cenários econômicos e seus reflexos nos negócios. Mediação de Sthefanny Araújo.",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1555",
+     "room": "juridica",
+     "start": "15:55",
+     "end": "16:30",
+     "title": "IA na Advocacia: Eficiência que Libera o que é Humano",
+     "speakers": "Luana Machado",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-canva-1600",
+     "room": "canva",
+     "start": "16:00",
+     "end": "17:00",
+     "title": "TikTokizando: Como Criar Conteúdo e Vender no Tiktok",
+     "speakers": "Iverson Iório (TikTokzando)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-unisuam-1600",
+     "room": "unisuam",
+     "start": "16:00",
+     "end": "16:50",
+     "title": "Keynote: Times Híbridos e a Colaboração Humano-IA - modelos de trabalho colaborativos entre humanos e agentes virtuais",
+     "speakers": "Mariana Macedo, Matheus Bitencourt (AI Agent Tech Sales Specialist na IBM) e Claudio Jr. (CEO Riverdata)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1610",
+     "room": "futuro",
+     "start": "16:10",
+     "end": "17:10",
+     "title": "O futuro mudou... bem na minha vez",
+     "speakers": "Dado Schneider",
+     "desc": "Sobre o Tema\n\nTexto sobre a palestra \"O futuro mudou... bem na minha vez \"\n\nPalestrante\n\nMestre e doutor em Comunicação pela PUC/RS, criador da marca Claro e pesquisador do comportamento das novas gerações. Foi “Evangelista Digital” do Magalu em sua Virada Digital, em 2015. Estudioso da Geração Z desde seu surgimento, atualmente também acompanha as transformações trazidas pelas gerações Alfa e Beta.",
+     "img": "assets/palestrantes/dado-scheneider.jpg"
+    },
+    {
+     "id": "10-juridica-1630",
+     "room": "juridica",
+     "start": "16:30",
+     "end": "17:05",
+     "title": "Talk: Gestão Baseada em Dados",
+     "speakers": "Erika Siqueira",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-atitude-1700",
+     "room": "atitude",
+     "start": "17:00",
+     "end": "17:50",
+     "title": "Workshop Liderança Inteligente para Negócios de Sucesso",
+     "speakers": "Paula Alexandrinsky",
+     "desc": "Paula Alexandrisky é fundadora e diretora da Ativme Consultoria, especialista em cultura organizacional e desenvolvimento de líderes e equipes. Economista com especialização em Gestão de Pessoas, reúne mais de 20 anos de experiência conectando desenvolvimento humano, estratégia e resultados.",
+     "img": "assets/palestrantes/foto-paula-alexandrinsky-2.jpg"
+    },
+    {
+     "id": "10-canva-1700",
+     "room": "canva",
+     "start": "17:00",
+     "end": "17:30",
+     "title": "Todo mundo é criativo, inclusive você!",
+     "speakers": "Felipe Guerra",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1705",
+     "room": "juridica",
+     "start": "17:05",
+     "end": "17:50",
+     "title": "Workshop: Diagnóstico do Escritório em 90 dias",
+     "speakers": "Antonio Barça / Emília Garcez / Fernanda Campanelli / Kely Santos",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1710",
+     "room": "futuro",
+     "start": "17:10",
+     "end": "18:00",
+     "title": "Tenha amigos e fique rico",
+     "speakers": "Luciano Potter",
+     "desc": "Jornalista, comunicador, TEDx Speaker e um dos principais nomes do rádio brasileiro, Luciano Potter construiu sua carreira conectando pessoas por meio de histórias inspiradoras. Suas palestras abordam comunicação, escuta ativa, relacionamentos humanos e construção de conexões autênticas, combinando humor, emoção e aprendizados práticos.",
+     "img": "assets/palestrantes/luciano-potter-v2.jpg"
+    },
+    {
+     "id": "10-canva-1730",
+     "room": "canva",
+     "start": "17:30",
+     "end": "18:00",
+     "title": "Crie Posts que Vendem: Estratégia Visual para Vender Mais",
+     "speakers": "Fabi Pincinato",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-juridica-1750",
+     "room": "juridica",
+     "start": "17:50",
+     "end": "18:40",
+     "title": "Tendências para o Futuro: A Chave para Inovar e Prosperar na Era da IA e da Algoritmização",
+     "speakers": "Álvaro Machado Dias",
+     "desc": "",
+     "img": "assets/palestrantes/whatsapp-image-2026-11-07-at-14-19-26.jpg"
+    },
+    {
+     "id": "10-canva-1800",
+     "room": "canva",
+     "start": "18:00",
+     "end": "18:50",
+     "title": "Como usar IA com Consciência Digital",
+     "speakers": "Fabio Nudge",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "10-futuro-1800",
+     "room": "futuro",
+     "start": "18:00",
+     "end": "18:50",
+     "title": "Sebrae Entrevista: Como construir presença, autoridade e confiança nas redes",
+     "speakers": "Felipe Theodoro",
+     "desc": "Criador de conteúdo, empresário e palestrante. Após 10 anos trabalhando no varejo como vendedor e gerente, ganhou projeção nacional durante a pandemia com vídeos de humor sobre situações do cotidiano. Hoje, soma mais de 10 milhões de seguidores, foi destaque na Forbes Top Creators 2025 e venceu o Icon Awards como Melhor Influenciador por voto popular. Também realiza palestras sobre vendas, varejo, relacionamento com clientes, empreendedorismo e redes sociais, levando sua experiência do comércio para o ambiente digital.",
+     "img": "assets/palestrantes/theodoro.jpg"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "label": "11/11 - Quarta-feira",
+   "talks": [
+    {
+     "id": "11-atitude-1000",
+     "room": "atitude",
+     "start": "10:00",
+     "end": "11:00",
+     "title": "Encontro Estadual dos Empretecos Conexões, histórias e atitude empreendedora.",
+     "speakers": "",
+     "desc": "Sobre o Tema\n\nSaiba mais:\n\nO Encontro Estadual de Empretecos será um momento especial de reencontro, conexão e inspiração para quem já viveu a experiência Empretec.\n\nCom a participação dos facilitadores Michel Chamovitz e Paulo Serrano e dos empresários convidados Gilvan Bueno, Silvana Maria e Thiago Godoy.\n\nSe você é Empreteco, esse encontro é para você. Venha se conectar, se inspirar e viver mais um capítulo dessa jornada!",
+     "img": null
+    },
+    {
+     "id": "11-unisuam-1000",
+     "room": "unisuam",
+     "start": "10:00",
+     "end": "11:00",
+     "title": "Da Universidade para o Mercado: A Expectativa do RH sobre os Egressos - o que as empresas buscam nos jovens profissionais e como se destacar em processos seletivos",
+     "speakers": "Pedro (Dir. Ensino UNISUAM), Adriana Queiroz (Gerente de RH Light) e Alexandre Campos (Gerente de Gente da Telecall)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-canva-1100",
+     "room": "canva",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Por que seus posts não chegam pra ninguém? Aprenda a falar a língua do seu cliente",
+     "speakers": "Carolina Pacheco",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1100",
+     "room": "futuro",
+     "start": "11:00",
+     "end": "11:50",
+     "title": "Como ser um empreendedor campeão",
+     "speakers": "Felipe Titto",
+     "desc": "Empresário, investidor do Shark Tank Brasil, apresentador e influenciador digital, Felipe Tito construiu uma trajetória que une entretenimento e negócios. À frente de um portfólio diversificado de empresas em segmentos como alimentação, hotelaria e marketing, tornou-se referência em empreendedorismo, construção de marca pessoal e geração de oportunidades. Em suas palestras, compartilha aprendizados sobre vendas, posicionamento e mentalidade de crescimento.",
+     "img": "assets/palestrantes/felipe-tito.jpg"
+    },
+    {
+     "id": "11-juridica-1100",
+     "room": "juridica",
+     "start": "11:00",
+     "end": "11:50",
+     "title": "Inteligência Humana em tempos de Inteligência Artificial",
+     "speakers": "Des. William Douglas",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-unisuam-1100",
+     "room": "unisuam",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Reescrevendo as Regras: Mulheres Negras e Diversidade Transformando o Direito e a Gestão - inclusão, protagonismo feminino e governança ESG",
+     "speakers": "Profa. Tatiane Duarte (Coordenadora NPJ - UNISUAM) e Carolina Amorim (Head de Comunicação, Diversidade e Sustentabilidade da L’Oréal Luxo no Brasil)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1150",
+     "room": "futuro",
+     "start": "11:50",
+     "end": "12:30",
+     "title": "Como vender no Tik Tok Shop",
+     "speakers": "Julia Campos",
+     "desc": "Gerente de Ads no TikTok Shop, pós-graduada em Marketing, Branding e Growth pela PUC-RS. Com experiência em plataformas como Meta, Google, Mercado Livre e TikTok, atua no universo de mídia digital e publicidade, conectando estratégia, tecnologia e performance para impulsionar marcas e gerar oportunidades de crescimento para negócios.",
+     "img": null
+    },
+    {
+     "id": "11-juridica-1150",
+     "room": "juridica",
+     "start": "11:50",
+     "end": "12:30",
+     "title": "Talk: Entre a Estratégia e o Caos - Os desafios reais de gerir pessoas, sócios, clientes e inovação em um escritório de advocacia",
+     "speakers": "Ana Zunino",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-canva-1200",
+     "room": "canva",
+     "start": "12:00",
+     "end": "12:30",
+     "title": "Creators e Edu Creators: conheça os programas criativos do Canva para designers, criativos e professores",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-atitude-1220",
+     "room": "atitude",
+     "start": "12:20",
+     "end": "13:30",
+     "title": "Workshop Multipotencialidade: como fazer seu repertório trabalhar a seu favor?",
+     "speakers": "Taiana Jung",
+     "desc": "Sobre o Tema\n\nVocê reúne conhecimentos e competências em diferentes áreas, e uma única definição profissional nem sempre dá conta de tudo o que sabe e faz. Neste workshop, vamos explorar como conectar esse repertório para fortalecer seu posicionamento e comunicar o valor da sua atuação. Com um olhar estratégico para a carreira e o empreendedorismo, a proposta é reconhecer como suas experiências podem se complementar e contribuir para suas escolhas na vida e nos negócios, considerando quem você é e o que deseja construir.\n\nPalestrante\n\nEmpresária e consultora estratégica, Taiana Jung é cofundadora da Logos Consultoria e atua no Brasil e em outros países da América Latina.",
+     "img": "assets/palestrantes/taiana-jung.jpg"
+    },
+    {
+     "id": "11-canva-1230",
+     "room": "canva",
+     "start": "12:30",
+     "end": "13:00",
+     "title": "Vendas sem Achismo: Estratégia Comercial na Prática",
+     "speakers": "Xico Piovezan",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1230",
+     "room": "futuro",
+     "start": "12:30",
+     "end": "13:30",
+     "title": "Finanças Comportamentais: a chave para o seu sucesso pessoal e profissional",
+     "speakers": "Thiago Godoy",
+     "desc": "Conhecido como “Papai Financeiro”, Thiago Godoy é educador financeiro, escritor e especialista em planejamento financeiro familiar. Com linguagem acessível e abordagem prática, mostra como escolhas conscientes podem transformar a relação com o dinheiro, o consumo e os investimentos, contribuindo para a construção de patrimônio.",
+     "img": "assets/palestrantes/thiago-godoyy.jpg"
+    },
+    {
+     "id": "11-juridica-1230",
+     "room": "juridica",
+     "start": "12:30",
+     "end": "13:30",
+     "title": "Talk: O Futuro da Monetização Da Advocacia: Novos Modelos, Novos Mercados",
+     "speakers": "Bruno Feigelson",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-canva-1300",
+     "room": "canva",
+     "start": "13:00",
+     "end": "13:30",
+     "title": "Canva AI 2.1: o Futuro é Conversar com a IA",
+     "speakers": "Suzana Winkel",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-atitude-1330",
+     "room": "atitude",
+     "start": "13:30",
+     "end": "14:20",
+     "title": "Workshop Aprenda de vez como Precificar",
+     "speakers": "Luciano Bender",
+     "desc": "Luciano Bender é consultor empresarial, palestrante e sócio-fundador da Bender Inteligência Empresarial. Desde 2004, atua como consultor, instrutor e palestrante do Sebrae e facilitador do Empretec, com foco em empreendedorismo, planejamento, finanças, marketing e vendas. Com experiência também na FGV, na docência universitária e como empresário, reúne sólida vivência prática em gestão e desenvolvimento de negócios.",
+     "img": "assets/palestrantes/luciano-bender-foto-1.jpg"
+    },
+    {
+     "id": "11-canva-1330",
+     "room": "canva",
+     "start": "13:30",
+     "end": "14:00",
+     "title": "Construa sua marca no Canva: Logo, Paleta e Identidade do Zero",
+     "speakers": "Fabi Pincinato",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1330",
+     "room": "futuro",
+     "start": "13:30",
+     "end": "14:10",
+     "title": "CapCut para Negócios: criação de vídeos com foco em engajamento e vendas",
+     "speakers": "Luana Zanerato",
+     "desc": "Estrategista de Criadores de Conteúdo e Agências no CapCut LATAM (ByteDance - TikTok). Graduada pela UNESP, com vivência internacional na China, atua na interseção entre creator economy, marketing de conteúdo e plataformas digitais, explorando como criatividade, tecnologia e tendências podem impulsionar o posicionamento de marcas e gerar novas oportunidades de crescimento para negócios.",
+     "img": "assets/palestrantes/luana-zanerato-foto-2.jpg"
+    },
+    {
+     "id": "11-canva-1400",
+     "room": "canva",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Negocie sem medo",
+     "speakers": "Breno Paquele",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-juridica-1400",
+     "room": "juridica",
+     "start": "14:00",
+     "end": "15:10",
+     "title": "Transição para a IA: Da Linguagem aos Agentes",
+     "speakers": "Ronaldo Lemos",
+     "desc": "advogado, professor, especialista em tecnologia, reconhecido internacionalmente por sua atuação na formulação de políticas digitais e de inovação. Foi o criador do Marco Civil da Internet, lei pioneira no Brasil.Lemos possui mestrado em Direito pela Universidade de Harvard e doutorado em Direito pela Universidade de São Paulo. Foi professor na School of International and Public Affairs da Universidade Columbia, no Schwarzman College da Universidade de Tsinghua em Pequim, além de ter sido pesquisador visitante no MIT, Princeton e Oxford.É fundador e cientista-chefe do Instituto de Tecnologia & Sociedade do Rio (ITS Rio), um dos principais centros de ensino e pesquisa da América Latina sobre tecnologia e sociedade.Lemos integra o Conselho de Supervisão da Meta, o Conselho de Segurança do Spotify, o Conselho da Fundação Stellar e do Museu do Amanhã, no Rio de Janeiro. É ainda colunista semanal da Folha de S.Paulo. E apresentador do \"Expresso Futuro\", série de documentários sobre inovação exibida pelo Canal Futura, atualmente na sua 9ª temporada. A série é vencedora do Gold Panda no Festival de TV de Sichuan na China, o maior da Ásia.",
+     "img": "assets/palestrantes/ronaldo-lemos.jpg"
+    },
+    {
+     "id": "11-unisuam-1400",
+     "room": "unisuam",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Habilidades Humanas em um mercado dominado por IA - habilidades humanas valorizadas no mercado de trabalho com IA.",
+     "speakers": "Adriano Ribeiro; Fabricio De Martino; Fernanda Corecha",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1410",
+     "room": "futuro",
+     "start": "14:10",
+     "end": "15:10",
+     "title": "Reforma Tributária: o básico que você precisa saber para 2027",
+     "speakers": "Felipe Dutra",
+     "desc": "Felipe Dutra é um consultor especializado em Reestruturações Empresariais e Planejamento Tributário, com foco em Estratégia e Inovação. Ele também é advogado, mestre em direito tributário, e atua como Professor e Palestrante em diversas instituições, dentre as quais podem ser citadas: FGV, PUC-Rio, USP, entre outras.",
+     "img": "assets/palestrantes/foto-felipe-dutra.jpg"
+    },
+    {
+     "id": "11-atitude-1420",
+     "room": "atitude",
+     "start": "14:20",
+     "end": "15:00",
+     "title": "Workshop NR-01 aplicada a Pequenos Negócios",
+     "speakers": "Wendell Araújo",
+     "desc": "Com 20 anos de experiência como Professor, Treinador, Consultor e Mentor, Wendell Araújo tem um histórico de liderança na Petrobras e atuação estratégica no RH, acompanhando líderes em seus processos de desenvolvimento. É Professor de Pós-Graduação em Neurociências, com formação em Administração, Especialização e Mestrado em Coaching e Liderança. Soma mais de 12 anos como desenvolvedor de líderes e possui 12 certificações internacionais em PNL, Coaching, Mentoring e Constelações.",
+     "img": "assets/palestrantes/wendell-araujo-foto-2.jpg"
+    },
+    {
+     "id": "11-atitude-1500",
+     "room": "atitude",
+     "start": "15:00",
+     "end": "16:00",
+     "title": "Painel Geração Empreendedora: jovens empreendedores, desafios, aprendizados e trajetórias de crescimento",
+     "speakers": "Laura Botelho (FutElas) / Gabriel Medeiros (Arte na Letra) / Filipe Magalhães (Poison Dunuts)- Mediação: Ingrid Areias",
+     "desc": "Histórias reais de jovens que transformam ideias em oportunidades. Com a participação de Laura Botelho, empreendedora e criadora do FutElas; Gabriel Medeiros, arquiteto, artista e criador do Arte na Letra; e Filipe Magalhães, criador da Poison Donuts. Um bate-papo sobre desafios, aprendizados e caminhos para construir negócios e gerar impacto, com mediação de Ingrid Areias.",
+     "img": null
+    },
+    {
+     "id": "11-canva-1500",
+     "room": "canva",
+     "start": "15:00",
+     "end": "15:30",
+     "title": "Novidades Canva 2026: os Recursos que Vão Turbinar seu Negócio",
+     "speakers": "Suzana Winkel",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-unisuam-1500",
+     "room": "unisuam",
+     "start": "15:00",
+     "end": "16:00",
+     "title": "Ciência que vira negócio: Pesquisadores que transformam Ideias em Startups - conhecimento científico convertido em soluções de mercado, produtos, tecnologias e startups.",
+     "speakers": "Alexandre Caruso; Conrado Torres; Francine da Rocha Tavares",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1510",
+     "room": "futuro",
+     "start": "15:10",
+     "end": "16:20",
+     "title": "Comunicação no Digital, o poder das redes sociais",
+     "speakers": "Cristiano Santos",
+     "desc": "Especialista em comportamento humano, liderança e desenvolvimento profissional, Cristiano Santos é reconhecido por conectar propósito, atitude e resultados. Suas palestras promovem reflexões sobre protagonismo, engajamento e transformação de equipes em cenários de constante mudança.",
+     "img": "assets/palestrantes/cristiano-santos.jpg"
+    },
+    {
+     "id": "11-juridica-1510",
+     "room": "juridica",
+     "start": "15:10",
+     "end": "15:55",
+     "title": "Painel: Regulação da IA: OAB, Judiciário e Deveres do Advogado",
+     "speakers": "Des. Wanderley Dantas, Felipe Dannemann, Daniel Gleissel",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-canva-1530",
+     "room": "canva",
+     "start": "15:30",
+     "end": "16:00",
+     "title": "Como criar apresentações, vídeos e materiais visuais no Canva",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-juridica-1555",
+     "room": "juridica",
+     "start": "15:55",
+     "end": "16:40",
+     "title": "Painel: Impactos da Reforma Tributária nos Pequenos Negócios: O que o empreendedor vai perguntar em 2027",
+     "speakers": "Felipe Dutra, Talita Félix, Pedro Barreto e Renata Haje",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-atitude-1600",
+     "room": "atitude",
+     "start": "16:00",
+     "end": "17:00",
+     "title": "Workshop Prompts que Vendem: Como Conversar com a IA para Gerar Resultados",
+     "speakers": "Luiz Coelho",
+     "desc": "Consultor de inovação a mais de 15 anos e especialista em uso de IA nos negócios. Cofundador e Head de Produtos na Octa Automação e Agentes de IA, onde atua na identificação de oportunidades, validação de modelos de negócio e aplicação prática da inteligência artificial para gerar resultados. É mentor de startups e facilitador em programas de inovação aberta, conectando estratégia, tecnologia e pessoas para transformar ideias em negócios sustentáveis.",
+     "img": "assets/palestrantes/luiz-coelho-foto.jpg"
+    },
+    {
+     "id": "11-canva-1600",
+     "room": "canva",
+     "start": "16:00",
+     "end": "17:00",
+     "title": "O cliente tem sempre razão?",
+     "speakers": "Patricia Capeluto",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-unisuam-1600",
+     "room": "unisuam",
+     "start": "16:00",
+     "end": "16:50",
+     "title": "Auconhecimento - Em Busca de um sentido - jornada de autoconhecimento e autorresponsabilidade inspirada nos ensinamentos de Viktor Frankl.",
+     "speakers": "Edna Oliveira (Vice-Reitora de RH - UNISUAM); Érica Tenório (Psicóloga clínica, conforme descrição no material); Renata Nahon",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1620",
+     "room": "futuro",
+     "start": "16:20",
+     "end": "17:10",
+     "title": "IAgora: como usar a Inteligência Artificial para alavancar o seu negócio",
+     "speakers": "Gil Giardelli",
+     "desc": "Professor, futurista, escritor e palestrante internacional, Gil Giardelli atua nas áreas de inteligência artificial, inovação e estudos do futuro. Com 27 anos de trajetória e mais de 2 mil palestras realizadas em diversos países, apoia líderes, empresas e governos na compreensão das transformações tecnológicas e de seus impactos. É professor em instituições como Fundação Dom Cabral, PUCRS e ESPM e apresenta o programa “O Impensável”, no UOL, que explora as conexões entre tecnologia, sociedade e futuro.",
+     "img": "assets/palestrantes/gil-tardelli.jpg"
+    },
+    {
+     "id": "11-juridica-1640",
+     "room": "juridica",
+     "start": "16:40",
+     "end": "17:20",
+     "title": "Painel: Compliance que cabe no Pequeno Escritório",
+     "speakers": "Gabriel Portella, Jonilson Aneli, Inacio Alencastro",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-atitude-1700",
+     "room": "atitude",
+     "start": "17:00",
+     "end": "17:50",
+     "title": "Workshop A Era dos Agentes de IA: Crie o Seu e Saia na Frente",
+     "speakers": "Álvaro Barros",
+     "desc": "Doutor em Engenharia de Defesa pelo Instituto Militar de Engenharia (IME), mestre em Engenharia com ênfase em Inteligência Artificial e especialista em Ciência de Dados, Machine Learning e IA Generativa. Professor de graduação e pós-graduação no IBMEC, FGV e outras instituições, atua também como consultor e executivo na área de Inteligência Artificial. Pesquisador e palestrante, conecta conhecimento científico à aplicação prática da IA, com foco em agentes inteligentes, automação, inovação e geração de resultados para os negócios.",
+     "img": "assets/palestrantes/foto-alvaro-barros-3.jpg"
+    },
+    {
+     "id": "11-canva-1700",
+     "room": "canva",
+     "start": "17:00",
+     "end": "18:00",
+     "title": "Pare de viralizar e comece a faturar",
+     "speakers": "Lorena Cruz",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1710",
+     "room": "futuro",
+     "start": "17:10",
+     "end": "18:00",
+     "title": "Comunicação Assertiva e Inteligência Emocional para Negócios",
+     "speakers": "Pedro Consorte",
+     "desc": "Pedro Consorte é especialista em Comunicação Não Violenta, Comunicação Assertiva e Inteligência Emocional. Há mais de 20 anos atua como facilitador e palestrante, tendo atuado em mais de 15 países. É cofundador do Instituto Música do Círculo e criador de metodologias que combinam comunicação, música e colaboração para transformar relações e ambientes de trabalho.",
+     "img": "assets/palestrantes/pedro-consorte.jpg"
+    },
+    {
+     "id": "11-juridica-1720",
+     "room": "juridica",
+     "start": "17:20",
+     "end": "18:10",
+     "title": "Advocacia como Negócio: As 3 alavancas de crescimento de um escritório de advocacia",
+     "speakers": "Euro Jr",
+     "desc": "",
+     "img": "assets/palestrantes/euro-jr.jpg"
+    },
+    {
+     "id": "11-canva-1800",
+     "room": "canva",
+     "start": "18:00",
+     "end": "18:50",
+     "title": "Linkedin de A a Z: estratégias para geração de conteúdo, autoridade e negócios",
+     "speakers": "Cristiano Santos",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "11-futuro-1800",
+     "room": "futuro",
+     "start": "18:00",
+     "end": "18:50",
+     "title": "Sebrae Entrevista: Da Trend ao Sucesso: Criando Negócios que Conectam Pessoas",
+     "speakers": "Camilla Pudim",
+     "desc": "Uma das maiores influenciadoras de beleza do Brasil. Criadora de conteúdo desde 2013, conquistou milhões de seguidores ao unir criatividade, autenticidade e produções artísticas que ganharam projeção internacional. Após consolidar sua carreira no universo digital, lançou a Pudim Beauty, sua própria marca de maquiagem, transformando influência em um negócio de sucesso.",
+     "img": "assets/palestrantes/camilla-pudim.jpg"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "label": "12/11 - Quinta-feira",
+   "talks": [
+    {
+     "id": "12-unisuam-1000",
+     "room": "unisuam",
+     "start": "10:00",
+     "end": "11:00",
+     "title": "Empreendedorismo Social e Negócios de Impacto Territorial - diagnóstico local, incubação de startups e desenvolvimento comunitário sustentável.",
+     "speakers": "Léo Filardi; Iza Botelho; Rafael Guimarães (Docente Trilha Desenvolv. Local UNISUAM)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-canva-1100",
+     "room": "canva",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Futuros das experiências de consumo",
+     "speakers": "Joziana Freitas",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1100",
+     "room": "futuro",
+     "start": "11:00",
+     "end": "11:50",
+     "title": "Você no centro das oportunidades",
+     "speakers": "Patricia Ramos",
+     "desc": "Apresentadora, criadora de conteúdo e empresária, reunindo mais de 10 milhões de seguidores nas redes sociais. Em seus perfis, compartilha conteúdos sobre autoestima, saúde mental e empoderamento feminino, temas que ressoam profundamente com seu público.\n\nEmpreendedora, também atua no segmento da moda com a marca de biquínis Pravi Moda Praia e é sócia da Creators Brand, ampliando sua atuação no mercado de influência e publicidade. Paralelamente à produção de conteúdo, Patrícia tem expandido sua atuação como empresária, ampliando sua presença nos segmentos de moda, publicidade e Creator Economy, por meio de projetos e negócios que dialogam com sua audiência.",
+     "img": "assets/palestrantes/patricia-ramos.jpg"
+    },
+    {
+     "id": "12-juridica-1100",
+     "room": "juridica",
+     "start": "11:00",
+     "end": "11:45",
+     "title": "Comunicação é Poder",
+     "speakers": "Karina Pachiega",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-unisuam-1100",
+     "room": "unisuam",
+     "start": "11:00",
+     "end": "12:00",
+     "title": "Como usar as redes sociais para alavancar seu negócio e seu valor pessoal - posicionamento digital e criação de conteúdo para fortalecer marca, resultados e autoridade.",
+     "speakers": "Chef Mamede; Wallace Safra; Prof. Gercton Coutinho",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-juridica-1145",
+     "room": "juridica",
+     "start": "11:45",
+     "end": "12:20",
+     "title": "Talk: não vem do Prompt",
+     "speakers": "Camila Bardini",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1150",
+     "room": "futuro",
+     "start": "11:50",
+     "end": "12:40",
+     "title": "Ainda mais criativos na era da IA: como pensar diferente quando as máquinas também criam",
+     "speakers": "Deh Bastos",
+     "desc": "Comunicadora, publicitária, especialista em Criatividade, Comunicação e Diversidade & Inclusão; 2x TEDx Speaker e jurada de festivais internacionais de publicidade. Palestrante indicada pela Elisama Santos como melhor palestra que já viu.",
+     "img": "assets/palestrantes/dehbastos-credito-ninajacobi-1.jpg"
+    },
+    {
+     "id": "12-atitude-1200",
+     "room": "atitude",
+     "start": "12:00",
+     "end": "12:50",
+     "title": "Workshop Comunicação e Oratória para seu sucesso profissional",
+     "speakers": "Dalton Thomaz",
+     "desc": "Dalton Ferreira atua há mais de 13 anos com treinamentos e desenvolvimento humano, contribuindo para a transformação de pessoas e organizações. É mestre em Liderança Organizacional e Coaching Pessoal, pós-graduado em Neurociências Pedagógicas e Trainer em Programação Neurolinguística (PNL) e Oratória. Especialista em Comunicação, Inteligência Emocional e Finanças Comportamentais, é coautor dos livros Ciclos da Vida Financeira e Transformando Dinheiro em Liberdade. Sua atuação é voltada ao desenvolvimento de competências comportamentais, comunicação de alto impacto e formação de líderes.",
+     "img": "assets/palestrantes/dalton-ferreira-foto-1.jpg"
+    },
+    {
+     "id": "12-canva-1200",
+     "room": "canva",
+     "start": "12:00",
+     "end": "12:30",
+     "title": "Crie Posts que Vendem: Estratégia Visual para Vender Mais",
+     "speakers": "Fabi Pincinato",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-juridica-1220",
+     "room": "juridica",
+     "start": "12:20",
+     "end": "13:20",
+     "title": "Painel: Jurídico como Parceiro Estratégico do Negócio",
+     "speakers": "landa Lopes / Lilian Coelho / Pamela Gonzaga / Kawana Amaral",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-canva-1230",
+     "room": "canva",
+     "start": "12:30",
+     "end": "13:00",
+     "title": "Escreva do jeito que o seu negócio fala",
+     "speakers": "Dalva Correa",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1240",
+     "room": "futuro",
+     "start": "12:40",
+     "end": "13:30",
+     "title": "Como virar influenciador do seu próprio negócio",
+     "speakers": "Rafael Kiso",
+     "desc": "Executivo e especialista em Marketing Digital, fundador e CMO da mLabs, referência em estratégias de marketing, redes sociais e transformação digital. Atua na criação de estratégias para marcas e negócios, com foco em inovação, performance e uso estratégico das redes sociais.",
+     "img": "assets/palestrantes/rafael-kiso.jpg"
+    },
+    {
+     "id": "12-atitude-1250",
+     "room": "atitude",
+     "start": "12:50",
+     "end": "13:40",
+     "title": "Workshop Ninguém compra produto, compra história",
+     "speakers": "Fabio Alves",
+     "desc": "Consultor, palestrante e especialista em gente e suas interações. São mais de 30 anos e 30 mil horas dedicadas a pessoas e negócios. Também poeta, escritor e compositor como Fabio Gagarin, une marketing, comportamento humano e o poder das histórias para criar conexões e provocar reflexões.",
+     "img": "assets/palestrantes/foto-fabio-alves-2.jpg"
+    },
+    {
+     "id": "12-canva-1300",
+     "room": "canva",
+     "start": "13:00",
+     "end": "13:30",
+     "title": "Novidades Canva 2026: os Recursos que Vão Turbinar seu Negócio",
+     "speakers": "Suzana Winkel",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-canva-1330",
+     "room": "canva",
+     "start": "13:30",
+     "end": "14:00",
+     "title": "Como criar apresentações, vídeos e materiais visuais no Canva",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1330",
+     "room": "futuro",
+     "start": "13:30",
+     "end": "14:20",
+     "title": "Como empreender e não adoecer",
+     "speakers": "Izabela Camargo",
+     "desc": "Jornalista, consultora e palestrante, especialista em saúde mental, bem-estar e performance no ambiente de trabalho. Criadora do conceito EPIs da Saúde Mental, atua na conscientização sobre prevenção do estresse, equilíbrio emocional e construção de ambientes profissionais mais saudáveis. É 2x vencedora do Prêmio iBest.",
+     "img": "assets/palestrantes/izabella.jpg"
+    },
+    {
+     "id": "12-atitude-1340",
+     "room": "atitude",
+     "start": "13:40",
+     "end": "14:50",
+     "title": "CapCut na prática: Aprenda a editar vídeos virais",
+     "speakers": "Luana Zanerato",
+     "desc": "Estrategista de Criadores de Conteúdo e Agências no CapCut LATAM (ByteDance - TikTok). Graduada pela UNESP, com vivência internacional na China, atua na interseção entre creator economy, marketing de conteúdo e plataformas digitais, explorando como criatividade, tecnologia e tendências podem impulsionar o posicionamento de marcas e gerar novas oportunidades de crescimento para negócios.",
+     "img": "assets/palestrantes/luana-zanerato-foto-2.jpg"
+    },
+    {
+     "id": "12-canva-1400",
+     "room": "canva",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Se o assunto, não for vendas, o assunto está errado",
+     "speakers": "Gustavo Malavota",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-juridica-1400",
+     "room": "juridica",
+     "start": "14:00",
+     "end": "14:35",
+     "title": "Talk: Gestão como Alavanca de Sucesso em seu Negócio Jurídico",
+     "speakers": "Isis Fontenele",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-unisuam-1400",
+     "room": "unisuam",
+     "start": "14:00",
+     "end": "15:00",
+     "title": "Carreiras nas Engenharias e Arquitetura: Tecnologia e Segurança do Trabalho - IA e processos modernos na construção civil, projetos urbanos e segurança industrial.",
+     "speakers": "Lucio Netto (Phygitall); Profa. Rachel Pires (Professora - UNISUAM); André Carmo",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1420",
+     "room": "futuro",
+     "start": "14:20",
+     "end": "15:10",
+     "title": "Crie experiências: Atendimento e Vendas de Alta Performance",
+     "speakers": "Diego Maia",
+     "desc": "É uma das principais referências em vendas no Brasil. Autor de oito livros e fundador da CDPV, realizou mais de 1.800 palestras e treinou 500 mil profissionais desde 2003. Apresenta o Podcast de Vendas, com mais de 2.000 episódios, e lidera o movimento #SouDeVendasComOrgulho. Seu lema: “Onde tem venda, tem vida”.",
+     "img": "assets/palestrantes/diego-maia.jpg"
+    },
+    {
+     "id": "12-juridica-1435",
+     "room": "juridica",
+     "start": "14:35",
+     "end": "15:20",
+     "title": "Talk: Governança de IA na Prática (ISO 42001)",
+     "speakers": "Juan Pablo Boeira",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-atitude-1450",
+     "room": "atitude",
+     "start": "14:50",
+     "end": "15:50",
+     "title": "Painel Reforma Tributária: Perspectivas e alternativas para às Micro e Pequenas Empresas",
+     "speakers": "Gabriel Palatnic e Claúdio Carneiro e Mediação: Marcos Mendes",
+     "desc": "O que muda para as micro e pequenas empresas com a Reforma Tributária e como se preparar para esse novo cenário? Com a participação de Gabriel Palatnic, advogado tributarista e consultor do Sebrae RJ, e Cláudio Carneiro, advogado, professor e especialista em Direito Tributário. Um painel para compreender impactos, perspectivas e alternativas para os pequenos negócios. Mediação de Marcos Mendes, economista da Coordenação de Capitalização e Serviços Financeiros do Sebrae RJ.",
+     "img": null
+    },
+    {
+     "id": "12-canva-1500",
+     "room": "canva",
+     "start": "15:00",
+     "end": "15:30",
+     "title": "Canva + IA: como utilizar os recursos de IA do Canva para seus criativos",
+     "speakers": "Bruno Wendricky",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-unisuam-1500",
+     "room": "unisuam",
+     "start": "15:00",
+     "end": "16:00",
+     "title": "Ativos Digitais, Blockchain e o Futuro das Finanças Descentralizadas - Web3, contratos inteligentes e regulação.",
+     "speakers": "Victor Hugo (Especialista Ativos Digitais - Banco BV); Adalberto Junior; Prof. Bruno Cezário (Professor - UNISUAM)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1510",
+     "room": "futuro",
+     "start": "15:10",
+     "end": "15:50",
+     "title": "Como vender e faturar na Shopee",
+     "speakers": "Leonardo Silva",
+     "desc": "Leonardo Silva é Head de Engajamento com Vendedores da Shopee no Brasil e integra a empresa desde o início das operações no país, em 2020. Atua no desenvolvimento de iniciativas de educação, comunicação e engajamento voltadas ao crescimento dos vendedores e ao fortalecimento do empreendedorismo local. Formado em Sistemas de Informação, construiu sua carreira na conexão entre tecnologia, educação e comunicação, com passagens por Meta e PayPal. Também é apresentador do Parada Shopee, série que compartilha histórias de vendedores que se destacam na plataforma.",
+     "img": "assets/palestrantes/leonardo-silva-nova-foto-profissional-1.jpg"
+    },
+    {
+     "id": "12-juridica-1520",
+     "room": "juridica",
+     "start": "15:20",
+     "end": "15:55",
+     "title": "Talk: O Jogo Limpo da Advocacia - Crescimento. Negócios e os Limites que um Advogado não Pode Ignorar",
+     "speakers": "Natalia Meneguit",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-canva-1530",
+     "room": "canva",
+     "start": "15:30",
+     "end": "16:00",
+     "title": "Canva + IA: como utilizar os recursos de IA do Canva para seus criativos 2",
+     "speakers": "Fabi Pincinato",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-atitude-1550",
+     "room": "atitude",
+     "start": "15:50",
+     "end": "17:00",
+     "title": "Painel Empreendedores de Sucesso: lições, aprendizados e resultados",
+     "speakers": "Jamille Capriglione / Marcelo Durval / Marcia Lopes / Claudia Queiroga / Sandra Portella. Mediação: Milton Dias",
+     "desc": "O que podemos aprender com quem transformou desafios em oportunidades e construiu sua própria trajetória empreendedora? Jamille Capriglione, Marcelo Durval, Márcia Lopes, Claudia Queiroga e Sandra Portella, protagonistas das Webséries Empreenda, novas séries audiovisuais do Sebrae, compartilham experiências, aprendizados e resultados de suas jornadas no empreendedorismo. Mediação de Milton Dias.",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1550",
+     "room": "futuro",
+     "start": "15:50",
+     "end": "16:30",
+     "title": "Como transformar ideias em crescimento para o seu negócio",
+     "speakers": "Paulinho Franqueira",
+     "desc": "Especialista em criatividade, inovação e transformação digital, Paulinho Franqueira atua na Adobe aproximando tecnologia e criação de valor para marcas e profissionais. Suas apresentações abordam criatividade aplicada aos negócios, experiência digital e o impacto das novas ferramentas no futuro do trabalho.",
+     "img": "assets/palestrantes/paulinho-frangueira.jpg"
+    },
+    {
+     "id": "12-juridica-1555",
+     "room": "juridica",
+     "start": "15:55",
+     "end": "16:30",
+     "title": "Talk: Agentes de IA e o Advogado Orquestrador",
+     "speakers": "Felipe Almeida",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-canva-1600",
+     "room": "canva",
+     "start": "16:00",
+     "end": "17:00",
+     "title": "Eles aparecem, a empresa cresce! Influenciador que vende se faz em casa",
+     "speakers": "Marcus Tonin",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-unisuam-1600",
+     "room": "unisuam",
+     "start": "16:00",
+     "end": "16:50",
+     "title": "Keynote de Encerramento: Múltiplas Carreiras no E-Sports e Jogos Digitais - ecossistema competitivo, atletas virtuais e oportunidades em mídia e entretenimento.",
+     "speakers": "Carlos Gama (VP Games e Esports ASSESPRO-RJ); Marianna Motta Muniz (Sócia OnFire / Egressa UNISUAM); Marie Freire (Presidente FERJEE)",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1630",
+     "room": "futuro",
+     "start": "16:30",
+     "end": "17:20",
+     "title": "Marketing na Era da IA",
+     "speakers": "Rapha Falcão",
+     "desc": "Especialista em Marketing e IA Generativa, professor, palestrante e criador de conteúdo. Mestre em Propriedade Intelectual e Inovação, possui MBA em Marketing e reúne mais de 1 milhão de seguidores em suas redes sociais. Já formou mais de 20 mil alunos on-line em mais de 40 países, realizou palestras em mais de 100 cidades brasileiras e acumula mais de 1.000 negócios atendidos em consultorias. TEDx Speaker, foi mentor convidado do reality O Plano é Esse, do Grupo Globo, e atua como influenciador da Meta.",
+     "img": "assets/palestrantes/cb-r9209.jpg"
+    },
+    {
+     "id": "12-juridica-1630",
+     "room": "juridica",
+     "start": "16:30",
+     "end": "17:10",
+     "title": "Painel: Advocacia do Futuro: Quem Sobrevive a próxima Década?",
+     "speakers": "Daniel Gigante / Pedro Pirajá / Antônio Barça",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-atitude-1700",
+     "room": "atitude",
+     "start": "17:00",
+     "end": "17:50",
+     "title": "IA descomplicada para negócios",
+     "speakers": "Iuri Almeida",
+     "desc": "Funcionário do Sebrae",
+     "img": "assets/palestrantes/iuri-almeida.jpg"
+    },
+    {
+     "id": "12-canva-1700",
+     "room": "canva",
+     "start": "17:00",
+     "end": "17:30",
+     "title": "IA não é mágica, é método",
+     "speakers": "Luana Clara",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-juridica-1710",
+     "room": "juridica",
+     "start": "17:10",
+     "end": "18:00",
+     "title": "Mentalidade de Campeão. Formando Times de Alta Performance",
+     "speakers": "Flavio Canto",
+     "desc": "",
+     "img": "assets/palestrantes/whatsapp-image-2026-11-07-at-14-19-26-1.jpg"
+    },
+    {
+     "id": "12-futuro-1720",
+     "room": "futuro",
+     "start": "17:20",
+     "end": "17:40",
+     "title": "Canva além do design: IA, criatividade e produtividade",
+     "speakers": "Bruno Wendricky",
+     "desc": "Nascido na periferia de São Paulo, iniciou sua trajetória em tecnologia durante a pandemia, contribuindo para o desenvolvimento mobile do Portal do Paciente do Hospital das Clínicas da FM-USP.\n\nAo longo da carreira, atuou em operações de criadores, engenharia de conteúdo e estratégias para comunidades digitais em empresas como Meta, Play9, ByteDance e Canva, apoiando milhares de creators e iniciativas de monetização, conteúdo e tecnologias criativas.\n\nNa Meta, integrou o time de Engenharia de Conteúdo e Operações de Criadores, apoiando mais de 10 mil creators na monetização de conteúdo no Facebook. Na ByteDance, desenvolveu iniciativas para a comunidade de criadores de IA do CapCut no Brasil, incluindo desafios criativos e o lançamento do Seedance 2.0 no país.\n\nAtualmente é Gerente de Criadores e Comunidades para o Brasil no Canva, liderando a estratégia e a comunidade de criadores de conteúdo geral, educacional e embaixadores",
+     "img": "assets/palestrantes/whatsapp-image-2026-11-07-at-12-26-15.jpg"
+    },
+    {
+     "id": "12-canva-1730",
+     "room": "canva",
+     "start": "17:30",
+     "end": "18:20",
+     "title": "Cuidando do corpo e da mente",
+     "speakers": "Manu Rios",
+     "desc": "",
+     "img": null
+    },
+    {
+     "id": "12-futuro-1740",
+     "room": "futuro",
+     "start": "17:40",
+     "end": "18:30",
+     "title": "Alcance sua Liberdade Financeira",
+     "speakers": "Primo Pobre",
+     "desc": "Eduardo Feldberg, conhecido como Primo Pobre, é paulistano, administrador, músico e youtuber. Trabalhou como vendedor ambulante, bancário e administrador escolar até encontrar no ensino sua paixão. Em 2013, criou um canal no YouTube com aulas gratuitas de música. Em 2020, um vídeo sobre quitação de financiamento viralizou, fazendo sua audiência saltar de 30 mil para 230 mil seguidores em apenas um mês. Esse sucesso deu origem ao Primo Pobre, nome sugerido pelos próprios fãs. Com linguagem simples, informal e bem-humorada, tornou-se uma das principais referências em finanças pessoais no Brasil.",
+     "img": "assets/palestrantes/primo-pobre.jpg"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#264D55">
+<meta name="description" content="Guia do Sebrae Rio Summit 2026 por Portes: agenda completa das 5 salas, mapa do pavilhão com sua localização em tempo real, alimentação e contato.">
+<title>Sebrae Rio Summit 2026 | Guia Portes</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">SRS</span>
+      <div class="brand-text">
+        <strong>Sebrae Rio Summit 2026</strong>
+        <small>10 a 12/11 &middot; Riocentro &middot; Guia Portes</small>
+      </div>
+    </div>
+    <span id="live-chip" class="live-chip" hidden></span>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== AGENDA ===================== -->
+  <section id="view-agenda" class="view" hidden>
+    <div class="view-head">
+      <h1>Agenda das salas</h1>
+      <p class="muted">Toque em uma palestra para ver detalhes, palestrantes e a sala no mapa.</p>
+    </div>
+    <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Dias do evento"></div>
+    <div class="room-filters" id="room-filters" aria-label="Filtrar salas"></div>
+    <div class="timeline-wrap" id="timeline-wrap">
+      <div class="timeline" id="timeline" role="grid" aria-label="Grade de palestras por sala"></div>
+    </div>
+  </section>
+
+  <!-- ===================== MAPA ===================== -->
+  <section id="view-mapa" class="view" hidden>
+    <div class="view-head">
+      <h1>Mapa do evento</h1>
+      <p class="muted">Centro de Convenções do Riocentro. Ative a localização para ver onde você está.</p>
+    </div>
+    <div class="map-toolbar">
+      <button id="btn-geo" class="btn btn-primary" type="button">📍 Ativar minha localização</button>
+      <button id="btn-center" class="btn" type="button" hidden>🎯 Centralizar em mim</button>
+      <button id="btn-fit" class="btn" type="button">🗺️ Ver pavilhão</button>
+    </div>
+    <div id="geo-status" class="geo-status" hidden></div>
+    <div class="map-frame">
+      <svg id="map-svg" role="img" aria-label="Mapa 2D do pavilhão do Sebrae Rio Summit"></svg>
+    </div>
+    <div class="map-legend" id="map-legend"></div>
+    <p class="map-disclaimer">Contorno do pavilhão em escala real (OpenStreetMap). A posição interna de salas e serviços é representativa e será refinada com o mapa oficial do evento.</p>
+  </section>
+
+  <!-- ===================== ALIMENTAÇÃO ===================== -->
+  <section id="view-comida" class="view" hidden>
+    <div class="view-head">
+      <h1>Alimentação</h1>
+      <p class="muted">Onde comer dentro e ao redor do evento.</p>
+    </div>
+    <div id="food-list" class="food-list"></div>
+  </section>
+
+  <!-- ===================== PORTES ===================== -->
+  <section id="view-portes" class="view" hidden>
+    <div class="portes-hero">
+      <div class="portes-logo">PORTES</div>
+      <div class="portes-tag">Contabilidade &amp; Soluções &middot; Macaé/RJ</div>
+    </div>
+    <div class="qr-card">
+      <h2>Agende sua consultoria</h2>
+      <p>Aponte a câmera do celular para o QR Code e fale direto com o nosso comercial no WhatsApp.</p>
+      <div id="qr-box" class="qr-box" role="img" aria-label="QR Code para WhatsApp do comercial da Portes"></div>
+      <p class="qr-msg">A mensagem já vai pronta:<br><em id="qr-msg-text"></em></p>
+      <div class="qr-actions">
+        <a id="btn-whats" class="btn btn-whats" href="#" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+        <button id="btn-copy" class="btn" type="button">🔗 Copiar link</button>
+      </div>
+    </div>
+    <div class="portes-about">
+      <h3>Quem somos</h3>
+      <p>O Grupo Portes une a <strong>Portes Contabilidade</strong> (contábil, fiscal e tributário) e a <strong>Portes Soluções</strong> (tecnologia e automação para negócios). Atendemos empresas de todo o estado do Rio de Janeiro com consultoria próxima e orientada a resultado.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Sheet de detalhes da palestra -->
+<div id="sheet-backdrop" class="sheet-backdrop" hidden></div>
+<div id="talk-sheet" class="talk-sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+  <button class="sheet-close" id="sheet-close" type="button" aria-label="Fechar">✕</button>
+  <div class="sheet-content" id="sheet-content"></div>
+</div>
+
+<nav class="bottombar" aria-label="Navegação principal">
+  <a href="#agenda" data-view="agenda" class="nav-item">
+    <svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Agenda</span>
+  </a>
+  <a href="#mapa" data-view="mapa" class="nav-item">
+    <svg viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Mapa</span>
+  </a>
+  <a href="#comida" data-view="comida" class="nav-item">
+    <svg viewBox="0 0 24 24"><path d="M5 3v8a2 2 0 0 0 2 2h0V3m2 0v18M5 3v8m11-8c-1.7 1.2-2.5 3.6-2.5 6 0 2 .8 3 2.5 3v9m0-18v18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <span>Comida</span>
+  </a>
+  <a href="#portes" data-view="portes" class="nav-item">
+    <svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="13" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13h3v3h-3zM17 17h3v3h-3z" fill="currentColor"/></svg>
+    <span>Portes</span>
+  </a>
+</nav>
+
+<script src="vendor/qrcode.js" defer></script>
+<script src="assets/js/agenda.js" defer></script>
+<script src="assets/js/mapa.js" defer></script>
+<script src="assets/js/alimentacao.js" defer></script>
+<script src="assets/js/contato.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

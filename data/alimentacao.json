@@ -1,0 +1,56 @@
+{
+ "aviso": "Os operadores da praça de alimentação mudam a cada edição e não são divulgados no site oficial. Esta lista é atualizada pela equipe Portes durante o evento: nomes, cardápios e Instagram entram aqui assim que confirmados no local.",
+ "locais": [
+  {
+   "id": "praca",
+   "nome": "Praça de Alimentação do Summit",
+   "emoji": "🍽️",
+   "onde": "Centro do pavilhão, entre o credenciamento e o Mercado Sebrae",
+   "status": "confirmado",
+   "desc": "Área central de alimentação do evento, com operadores de lanches, refeições rápidas, cafés e bebidas. Cardápios e preços ficam expostos em cada balcão.",
+   "cardapio": [],
+   "instagram": null,
+   "foco": { "tipo": "zona", "id": "praca" }
+  },
+  {
+   "id": "mercado-sebrae",
+   "nome": "Mercado Sebrae",
+   "emoji": "🧺",
+   "onde": "Ala leste do pavilhão, ao lado da Praça de Alimentação",
+   "status": "confirmado",
+   "desc": "Vitrine de pequenos negócios fluminenses com venda direta do produtor: alimentos artesanais, doces, cafés especiais, além de moda, acessórios, beleza e artesanato. Ótimo para provar e levar produtos locais.",
+   "cardapio": [
+    "Alimentos artesanais e doces regionais",
+    "Cafés especiais de produtores do estado",
+    "Moda, acessórios, beleza e artesanato"
+   ],
+   "instagram": "sebraerj",
+   "foco": { "tipo": "zona", "id": "mercado" }
+  },
+  {
+   "id": "mcdonalds",
+   "nome": "McDonald's Riocentro",
+   "emoji": "🍔",
+   "onde": "Dentro do complexo Riocentro, fora do pavilhão do Summit",
+   "status": "confirmado",
+   "desc": "Unidade fixa do complexo, a poucos minutos a pé do Centro de Convenções. Alternativa rápida fora do pavilhão.",
+   "cardapio": [
+    "Lanches e combos",
+    "McCafé: cafés e sobremesas"
+   ],
+   "instagram": "mcdonalds_br",
+   "foco": { "tipo": "building", "id": "mcdonalds" }
+  },
+  {
+   "id": "operadores-dia",
+   "nome": "Operadores do dia (food trucks e balcões)",
+   "emoji": "🚚",
+   "onde": "Praça de Alimentação e pontos de apoio pelo pavilhão",
+   "status": "a confirmar",
+   "desc": "Lista de lojas e food trucks presentes hoje, com nome, cardápio e Instagram de cada um. Em levantamento no local: será preenchida ao longo do evento.",
+   "cardapio": [],
+   "instagram": null,
+   "foco": { "tipo": "zona", "id": "praca" }
+  }
+ ]
+}
