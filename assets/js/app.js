@@ -80,7 +80,19 @@
     }
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').catch(() => { /* opcional */ });
+      const tinhaControlador = !!navigator.serviceWorker.controller;
+      navigator.serviceWorker.register('sw.js')
+        .then((reg) => reg.update())
+        .catch(() => { /* opcional */ });
+      if (tinhaControlador) {
+        // versão nova assumiu: recarrega uma única vez para servir tudo atualizado
+        let recarregou = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (recarregou) return;
+          recarregou = true;
+          location.reload();
+        });
+      }
     }
   }
 

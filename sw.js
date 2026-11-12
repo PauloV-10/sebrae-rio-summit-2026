@@ -1,6 +1,6 @@
 /* Service worker: deixa o guia rápido e utilizável mesmo com internet fraca no pavilhão.
    Estratégia: rede primeiro para dados (JSON), cache primeiro para o restante. */
-const VERSION = 'srs26-v5';
+const VERSION = 'srs26-v6';
 const CORE = [
   './',
   'index.html',
@@ -39,6 +39,20 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
+
+  if (e.request.mode === 'navigate') {
+    // casca da página: rede primeiro, para a versão nova chegar já na primeira visita
+    e.respondWith(
+      fetch(e.request)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(VERSION).then((c) => c.put(e.request, copy));
+          return res;
+        })
+        .catch(() => caches.match(e.request).then((h) => h || caches.match('index.html')))
+    );
+    return;
+  }
 
   if (url.pathname.endsWith('.json')) {
     // dados: tenta a rede (conteúdo pode ser atualizado durante o evento), cai para o cache
