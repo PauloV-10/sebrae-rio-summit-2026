@@ -11,8 +11,9 @@
     watchId: null, userXY: null, lastFix: null,
     pointers: new Map(), pinchDist: 0,
     userTouched: false, pendingFit: null,
+    floor: 0,
   };
-  const POI_ICON = { banheiro: '🚻', entrada: '🚪', alimentacao: '🍽️', compras: '🛍️', info: 'ℹ️', food: '🍔' };
+  const POI_ICON = { banheiro: '🚻', entrada: '🚪', alimentacao: '🍽️', compras: '🛍️', info: 'ℹ️', food: '🍔', escada: '🪜' };
 
   const $ = (s) => document.querySelector(s);
   const el = (tag, attrs) => {
@@ -104,9 +105,8 @@
 
     const gCtx = el('g', { id: 'g-ctx' });
     const gMain = el('g', { id: 'g-main' });
-    const gZones = el('g', { id: 'g-zones' });
-    const gPois = el('g', { id: 'g-pois' });
-    svg.append(gCtx, gMain, gZones, gPois);
+    const gFloors = [el('g', { id: 'g-floor-0' }), el('g', { id: 'g-floor-1', style: 'display:none' })];
+    svg.append(gCtx, gMain, gFloors[0], gFloors[1]);
 
     // contexto: complexo e predios vizinhos
     osm.buildings.forEach((b) => {
@@ -132,9 +132,10 @@
     gMain.appendChild(el('polygon', { points: polyPts(cinco.coords), class: 'b-cinco' }));
     state.cincoBounds = bboxOf(cinco.coords);
 
-    // zonas internas
+    // zonas internas, agrupadas por andar
     interior.zones.forEach((z) => {
-      const attrs = { points: polyPts(z.poly), 'data-zone': z.id };
+      const g = gFloors[z.floor || 0];
+      const attrs = { points: polyPts(z.poly), 'data-zone': z.id, 'data-floor': z.floor || 0 };
       if (z.type === 'sala') {
         attrs.fill = hexA(z.color || '#264D55', 0.18);
         attrs.stroke = z.color || '#264D55';
@@ -142,22 +143,23 @@
       } else {
         attrs.class = 'z-' + z.type;
       }
-      gZones.appendChild(el('polygon', attrs));
+      g.appendChild(el('polygon', attrs));
       const [cx, cy] = centroid(z.poly);
       const sala = z.type === 'sala';
-      wrapLabel(gZones, z.name, cx, cy + 2, 'map-label' + (sala ? '' : ' lbl-espaco'), sala ? 15 : 12);
+      wrapLabel(g, z.name, cx, cy + 2, 'map-label' + (sala ? '' : ' lbl-espaco'), sala ? 15 : 12);
     });
 
-    // pontos de interesse
+    // pontos de interesse, por andar
     interior.pois.forEach((p) => {
+      const g = gFloors[p.floor || 0];
       const [x, y] = proj(p.at);
-      gPois.appendChild(el('circle', { cx: x, cy: y, r: 5, class: 'poi-dot', 'data-poi': p.id }));
+      g.appendChild(el('circle', { cx: x, cy: y, r: 5, class: 'poi-dot', 'data-poi': p.id, 'data-floor': p.floor || 0 }));
       const ic = el('text', { x, y: y + 2.3, class: 'poi-ico' });
       ic.textContent = POI_ICON[p.type] || '📌';
-      gPois.appendChild(ic);
+      g.appendChild(ic);
       const title = el('title', {});
       title.textContent = p.name;
-      gPois.lastChild.appendChild(title);
+      g.lastChild.appendChild(title);
     });
 
     // marcador do usuario
@@ -174,6 +176,32 @@
     return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
   };
 
+  // ---------- andares ----------
+  function setFloor(f) {
+    state.floor = f;
+    const g0 = state.svg.querySelector('#g-floor-0');
+    const g1 = state.svg.querySelector('#g-floor-1');
+    if (g0) g0.style.display = f === 0 ? '' : 'none';
+    if (g1) g1.style.display = f === 1 ? '' : 'none';
+    document.querySelectorAll('[data-floor-btn]').forEach((b) => {
+      const on = +b.dataset.floorBtn === f;
+      b.classList.toggle('btn-primary', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  function buildFloorButtons() {
+    const bar = document.querySelector('.map-toolbar');
+    [[0, '🏟️ Térreo'], [1, '🪜 2º piso']].forEach(([f, label]) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'btn' + (f === 0 ? ' btn-primary' : '');
+      b.dataset.floorBtn = f;
+      b.textContent = label;
+      b.addEventListener('click', () => setFloor(f));
+      bar.appendChild(b);
+    });
+  }
+
   // ---------- legenda ----------
   function buildLegend(data, interior) {
     const lg = $('#map-legend');
@@ -184,6 +212,7 @@
     add('<span class="legend-swatch" style="background:rgba(243,204,119,.6)"></span>Credenciamento');
     add('<span class="legend-swatch" style="background:rgba(230,126,34,.4)"></span>Alimentação');
     add('🚻 Banheiros');
+    add('🪜 Escada rolante');
     add('<span class="legend-swatch" style="background:#1668DC;border-radius:50%"></span>Você');
   }
 
@@ -302,6 +331,8 @@
     deferred(() => {
       const poly = state.svg.querySelector(`[data-zone="${id}"]`);
       if (!poly) { fitBounds(state.cincoBounds, 0.14); return; }
+      const floor = +(poly.getAttribute('data-floor') || 0);
+      if (floor !== state.floor) setFloor(floor);
       const pts = poly.getAttribute('points').split(' ').map((p) => p.split(',').map(Number));
       let minx = 1e9, miny = 1e9, maxx = -1e9, maxy = -1e9;
       pts.forEach(([x, y]) => {
@@ -335,6 +366,7 @@
       state.svg = $('#map-svg');
       build(osm, interior);
       buildLegend(data, interior);
+      buildFloorButtons();
       bindGestures();
       $('#btn-geo').addEventListener('click', startGeo);
       $('#btn-center').addEventListener('click', centerOnUser);

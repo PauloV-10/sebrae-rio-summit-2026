@@ -206,7 +206,7 @@
       '<p class="muted">Detalhes desta atividade serão divulgados pelo evento.</p>';
     box.innerHTML =
       media +
-      `<span class="sheet-roomchip" style="background:${room.color}">${esc(room.name)}</span>` +
+      `<span class="sheet-roomchip" style="background:${room.color}">${esc(room.name)}${room.local ? ' · ' + esc(room.local) : ''}</span>` +
       `<div class="sheet-time">🕐 ${t.start} às ${t.end}</div>` +
       `<h2 class="sheet-title" id="sheet-title">${esc(t.title)}</h2>` +
       (t.speakers ? `<div class="sheet-speakers">🎤 ${esc(t.speakers)}</div>` : '') +

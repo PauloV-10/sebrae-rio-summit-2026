@@ -32,42 +32,58 @@ const quad = (corners) => corners.map(([a, b]) => {
 });
 
 // ---------------- layout representativo (ajustar com o mapa oficial do evento) ----------------
+// floor 0 = Terreo | floor 1 = 2o piso (Varanda e salas de conteudo; Sala Atitude
+// confirmada como Sala 203 C no video oficial do @sebraerj de 12/11/2026)
 const zones = [
-  // ala sul: palco principal
-  { id: 'futuro', name: 'Palco Futuro', type: 'sala', color: '#264D55',
+  // ===== TERREO =====
+  { id: 'futuro', name: 'Palco Futuro', type: 'sala', color: '#264D55', floor: 0,
     poly: quad([[-0.42, 0.22], [0.42, 0.22], [0.10, 0.82], [-0.10, 0.82]]) },
-  // faixa central: chegada, alimentacao e mercado
-  { id: 'entrada-hall', name: 'Credenciamento', type: 'servico',
+  { id: 'entrada-hall', name: 'Credenciamento e autoatendimento', type: 'servico', floor: 0,
     poly: quad([[-0.78, -0.06], [-0.40, -0.06], [-0.40, 0.12], [-0.78, 0.12]]) },
-  { id: 'praca', name: 'Praça de Alimentação', type: 'alimentacao',
+  { id: 'praca', name: 'Praça de Alimentação', type: 'alimentacao', floor: 0,
     poly: quad([[-0.34, -0.06], [0.10, -0.06], [0.10, 0.14], [-0.34, 0.14]]) },
-  { id: 'mercado', name: 'Mercado Sebrae', type: 'espaco',
+  { id: 'mercado', name: 'Mercado Sebrae', type: 'espaco', floor: 0,
     poly: quad([[0.16, -0.10], [0.62, -0.10], [0.54, 0.16], [0.16, 0.16]]) },
-  { id: 'esp-games', name: 'Games + Imersivas', type: 'espaco',
+  { id: 'esp-imersivas', name: 'Experiências Imersivas', type: 'espaco', floor: 0,
     poly: quad([[0.44, -0.28], [0.66, -0.10], [0.54, 0.02], [0.38, -0.10]]) },
-  // ala norte: salas de conteudo e espacos tematicos
-  { id: 'atitude', name: 'Sala Atitude', type: 'sala', color: '#8A4FBF',
+  { id: 'esp-assessoria', name: 'Assessoria de Negócios', type: 'espaco', floor: 0,
     poly: quad([[-0.62, -0.32], [-0.12, -0.32], [-0.12, -0.12], [-0.62, -0.12]]) },
-  { id: 'canva', name: 'Sala CANVA', type: 'sala', color: '#00A5B5',
+  { id: 'esp-verde', name: 'Área de Experiências', type: 'espaco', floor: 0,
     poly: quad([[-0.06, -0.32], [0.46, -0.32], [0.52, -0.12], [-0.06, -0.12]]) },
-  { id: 'juridica', name: 'Sala Inovação Jurídica', type: 'sala', color: '#C98A2D',
+  { id: 'esp-sebraelab', name: 'SebraeLab', type: 'espaco', floor: 0,
     poly: quad([[-0.36, -0.58], [-0.02, -0.58], [-0.02, -0.38], [-0.46, -0.38]]) },
-  { id: 'unisuam', name: 'Sala UNISUAM', type: 'sala', color: '#B5485E',
+  { id: 'esp-gamesrj', name: 'Sebrae Games RJ', type: 'espaco', floor: 0,
     poly: quad([[0.08, -0.58], [0.38, -0.58], [0.44, -0.38], [0.08, -0.38]]) },
-  { id: 'esp-startups', name: 'Startups + SebraeLab', type: 'espaco',
+  { id: 'esp-startups', name: 'Startups', type: 'espaco', floor: 0,
     poly: quad([[-0.16, -0.78], [0.08, -0.78], [0.18, -0.62], [-0.24, -0.62]]) },
-  { id: 'esp-turismo', name: 'Turismo + FIRJAN + SENAC', type: 'espaco',
+  { id: 'esp-turismo', name: 'Turismo + FIRJAN + SENAC', type: 'espaco', floor: 0,
     poly: quad([[-0.76, 0.16], [-0.44, 0.16], [-0.36, 0.36], [-0.60, 0.36]]) },
-  { id: 'esp-consult', name: 'Consultorias', type: 'espaco',
+  { id: 'esp-consult', name: 'Consultorias', type: 'espaco', floor: 0,
     poly: quad([[-0.84, -0.06], [-0.64, -0.22], [-0.56, -0.12], [-0.76, 0.02]]) },
+  // ===== 2o PISO =====
+  { id: 'atitude', name: 'Sala Atitude (203 C)', type: 'sala', color: '#8A4FBF', floor: 1,
+    poly: quad([[-0.62, -0.32], [-0.12, -0.32], [-0.12, -0.12], [-0.62, -0.12]]) },
+  { id: 'canva', name: 'Sala CANVA', type: 'sala', color: '#00A5B5', floor: 1,
+    poly: quad([[-0.06, -0.32], [0.46, -0.32], [0.52, -0.12], [-0.06, -0.12]]) },
+  { id: 'juridica', name: 'Sala Inovação Jurídica', type: 'sala', color: '#C98A2D', floor: 1,
+    poly: quad([[-0.36, -0.58], [-0.02, -0.58], [-0.02, -0.38], [-0.46, -0.38]]) },
+  { id: 'unisuam', name: 'Sala UNISUAM', type: 'sala', color: '#B5485E', floor: 1,
+    poly: quad([[0.08, -0.58], [0.38, -0.58], [0.44, -0.38], [0.08, -0.38]]) },
+  { id: 'varanda', name: 'Varanda', type: 'espaco', floor: 1,
+    poly: quad([[-0.78, -0.04], [-0.30, -0.04], [-0.30, 0.08], [-0.78, 0.08]]) },
 ];
 
 const pois = [
-  { id: 'entrada', name: 'Entrada principal', type: 'entrada', at: P(-0.90, 0.03) },
-  { id: 'wc-norte', name: 'Banheiros (ala norte)', type: 'banheiro', at: P(0.00, -0.93) },
-  { id: 'wc-oeste', name: 'Banheiros (centro, lado oeste)', type: 'banheiro', at: P(-0.30, 0.22) },
-  { id: 'wc-leste', name: 'Banheiros (lado leste)', type: 'banheiro', at: P(0.68, 0.10) },
-  { id: 'wc-sul', name: 'Banheiros (fundo do Palco Futuro)', type: 'banheiro', at: P(-0.16, 0.74) },
+  // terreo
+  { id: 'entrada', name: 'Entrada principal', type: 'entrada', floor: 0, at: P(-0.90, 0.03) },
+  { id: 'escada-t', name: 'Escada rolante (salas no 2º piso)', type: 'escada', floor: 0, at: P(-0.70, 0.03) },
+  { id: 'wc-norte', name: 'Banheiros (ala norte)', type: 'banheiro', floor: 0, at: P(0.00, -0.93) },
+  { id: 'wc-oeste', name: 'Banheiros (centro, lado oeste)', type: 'banheiro', floor: 0, at: P(-0.30, 0.22) },
+  { id: 'wc-leste', name: 'Banheiros (lado leste)', type: 'banheiro', floor: 0, at: P(0.68, 0.10) },
+  { id: 'wc-sul', name: 'Banheiros (fundo do Palco Futuro)', type: 'banheiro', floor: 0, at: P(-0.16, 0.74) },
+  // 2o piso
+  { id: 'escada-2p', name: 'Escada rolante (descer para o térreo)', type: 'escada', floor: 1, at: P(-0.70, 0.03) },
+  { id: 'wc-2p', name: 'Banheiros (2º piso)', type: 'banheiro', floor: 1, at: P(0.00, -0.68) },
 ];
 
 const out = {

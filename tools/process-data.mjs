@@ -14,11 +14,11 @@ const raw = JSON.parse(fs.readFileSync(path.join(SCRATCH, 'agenda-completa.json'
 
 // ---------- salas ----------
 const ROOMS = [
-  { id: 'futuro', name: 'Palco Futuro', short: 'Futuro', color: '#264D55', cap: 3000 },
-  { id: 'atitude', name: 'Sala Atitude', short: 'Atitude', color: '#8A4FBF', cap: 500 },
-  { id: 'canva', name: 'Sala CANVA', short: 'CANVA', color: '#00A5B5', cap: 500 },
-  { id: 'juridica', name: 'Sala Inovação Jurídica', short: 'Inovação Jurídica', color: '#C98A2D', cap: 500 },
-  { id: 'unisuam', name: 'Sala UNISUAM', short: 'UNISUAM', color: '#B5485E', cap: 500 },
+  { id: 'futuro', name: 'Palco Futuro', short: 'Futuro', color: '#264D55', cap: 3000, local: 'Térreo' },
+  { id: 'atitude', name: 'Sala Atitude', short: 'Atitude', color: '#8A4FBF', cap: 500, local: '2º piso · Sala 203 C' },
+  { id: 'canva', name: 'Sala CANVA', short: 'CANVA', color: '#00A5B5', cap: 500, local: '2º piso' },
+  { id: 'juridica', name: 'Sala Inovação Jurídica', short: 'Inovação Jurídica', color: '#C98A2D', cap: 500, local: '2º piso' },
+  { id: 'unisuam', name: 'Sala UNISUAM', short: 'UNISUAM', color: '#B5485E', cap: 500, local: '2º piso' },
 ];
 const roomIdByName = (n) => {
   const t = (n || '').toLowerCase();

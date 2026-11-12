@@ -20,6 +20,7 @@
    "name": "Palco Futuro",
    "type": "sala",
    "color": "#264D55",
+   "floor": 0,
    "poly": [
     [
      -22.9788305,
@@ -41,8 +42,9 @@
   },
   {
    "id": "entrada-hall",
-   "name": "Credenciamento",
+   "name": "Credenciamento e autoatendimento",
    "type": "servico",
+   "floor": 0,
    "poly": [
     [
      -22.9786635,
@@ -66,6 +68,7 @@
    "id": "praca",
    "name": "Praça de Alimentação",
    "type": "alimentacao",
+   "floor": 0,
    "poly": [
     [
      -22.9786264,
@@ -89,6 +92,7 @@
    "id": "mercado",
    "name": "Mercado Sebrae",
    "type": "espaco",
+   "floor": 0,
    "poly": [
     [
      -22.9785561,
@@ -109,9 +113,10 @@
    ]
   },
   {
-   "id": "esp-games",
-   "name": "Games + Imersivas",
+   "id": "esp-imersivas",
+   "name": "Experiências Imersivas",
    "type": "espaco",
+   "floor": 0,
    "poly": [
     [
      -22.9784057,
@@ -132,10 +137,179 @@
    ]
   },
   {
+   "id": "esp-assessoria",
+   "name": "Assessoria de Negócios",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9784668,
+     -43.4109941
+    ],
+    [
+     -22.9784246,
+     -43.4106378
+    ],
+    [
+     -22.9785656,
+     -43.410616
+    ],
+    [
+     -22.9786077,
+     -43.4109723
+    ]
+   ]
+  },
+  {
+   "id": "esp-verde",
+   "name": "Área de Experiências",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9784196,
+     -43.410595
+    ],
+    [
+     -22.9783758,
+     -43.4102244
+    ],
+    [
+     -22.9785117,
+     -43.4101598
+    ],
+    [
+     -22.9785606,
+     -43.4105732
+    ]
+   ]
+  },
+  {
+   "id": "esp-sebraelab",
+   "name": "SebraeLab",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9782616,
+     -43.4108371
+    ],
+    [
+     -22.978233,
+     -43.4105948
+    ],
+    [
+     -22.9783739,
+     -43.410573
+    ],
+    [
+     -22.978411,
+     -43.4108866
+    ]
+   ]
+  },
+  {
+   "id": "esp-gamesrj",
+   "name": "Sebrae Games RJ",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9782245,
+     -43.4105236
+    ],
+    [
+     -22.9781993,
+     -43.4103098
+    ],
+    [
+     -22.9783352,
+     -43.4102452
+    ],
+    [
+     -22.9783655,
+     -43.4105018
+    ]
+   ]
+  },
+  {
+   "id": "esp-startups",
+   "name": "Startups",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9781038,
+     -43.4107164
+    ],
+    [
+     -22.9780836,
+     -43.4105454
+    ],
+    [
+     -22.9781879,
+     -43.4104567
+    ],
+    [
+     -22.9782233,
+     -43.410756
+    ]
+   ]
+  },
+  {
+   "id": "esp-turismo",
+   "name": "Turismo + FIRJAN + SENAC",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9788169,
+     -43.4110415
+    ],
+    [
+     -22.9787899,
+     -43.4108135
+    ],
+    [
+     -22.9789242,
+     -43.4107347
+    ],
+    [
+     -22.9789444,
+     -43.4109057
+    ]
+   ]
+  },
+  {
+   "id": "esp-consult",
+   "name": "Consultorias",
+   "type": "espaco",
+   "floor": 0,
+   "poly": [
+    [
+     -22.9786685,
+     -43.4111225
+    ],
+    [
+     -22.9785389,
+     -43.4109974
+    ],
+    [
+     -22.9786027,
+     -43.4109295
+    ],
+    [
+     -22.9787182,
+     -43.4110568
+    ]
+   ]
+  },
+  {
    "id": "atitude",
-   "name": "Sala Atitude",
+   "name": "Sala Atitude (203 C)",
    "type": "sala",
    "color": "#8A4FBF",
+   "floor": 1,
    "poly": [
     [
      -22.9784668,
@@ -160,6 +334,7 @@
    "name": "Sala CANVA",
    "type": "sala",
    "color": "#00A5B5",
+   "floor": 1,
    "poly": [
     [
      -22.9784196,
@@ -184,6 +359,7 @@
    "name": "Sala Inovação Jurídica",
    "type": "sala",
    "color": "#C98A2D",
+   "floor": 1,
    "poly": [
     [
      -22.9782616,
@@ -208,6 +384,7 @@
    "name": "Sala UNISUAM",
    "type": "sala",
    "color": "#B5485E",
+   "floor": 1,
    "poly": [
     [
      -22.9782245,
@@ -228,71 +405,26 @@
    ]
   },
   {
-   "id": "esp-startups",
-   "name": "Startups + SebraeLab",
+   "id": "varanda",
+   "name": "Varanda",
    "type": "espaco",
+   "floor": 1,
    "poly": [
     [
-     -22.9781038,
-     -43.4107164
+     -22.9786776,
+     -43.4110776
     ],
     [
-     -22.9780836,
-     -43.4105454
+     -22.9786372,
+     -43.4107355
     ],
     [
-     -22.9781879,
-     -43.4104567
+     -22.9787217,
+     -43.4107224
     ],
     [
-     -22.9782233,
-     -43.410756
-    ]
-   ]
-  },
-  {
-   "id": "esp-turismo",
-   "name": "Turismo + FIRJAN + SENAC",
-   "type": "espaco",
-   "poly": [
-    [
-     -22.9788169,
-     -43.4110415
-    ],
-    [
-     -22.9787899,
-     -43.4108135
-    ],
-    [
-     -22.9789242,
-     -43.4107347
-    ],
-    [
-     -22.9789444,
-     -43.4109057
-    ]
-   ]
-  },
-  {
-   "id": "esp-consult",
-   "name": "Consultorias",
-   "type": "espaco",
-   "poly": [
-    [
-     -22.9786685,
-     -43.4111225
-    ],
-    [
-     -22.9785389,
-     -43.4109974
-    ],
-    [
-     -22.9786027,
-     -43.4109295
-    ],
-    [
-     -22.9787182,
-     -43.4110568
+     -22.9787622,
+     -43.4110645
     ]
    ]
   }
@@ -302,15 +434,27 @@
    "id": "entrada",
    "name": "Entrada principal",
    "type": "entrada",
+   "floor": 0,
    "at": [
     -22.978737,
     -43.4111555
    ]
   },
   {
+   "id": "escada-t",
+   "name": "Escada rolante (salas no 2º piso)",
+   "type": "escada",
+   "floor": 0,
+   "at": [
+    -22.9787202,
+    -43.411013
+   ]
+  },
+  {
    "id": "wc-norte",
    "name": "Banheiros (ala norte)",
    "type": "banheiro",
+   "floor": 0,
    "at": [
     -22.9779846,
     -43.4106187
@@ -320,6 +464,7 @@
    "id": "wc-oeste",
    "name": "Banheiros (centro, lado oeste)",
    "type": "banheiro",
+   "floor": 0,
    "at": [
     -22.9788204,
     -43.4107072
@@ -329,6 +474,7 @@
    "id": "wc-leste",
    "name": "Banheiros (lado leste)",
    "type": "banheiro",
+   "floor": 0,
    "at": [
     -22.9786533,
     -43.4100218
@@ -338,9 +484,30 @@
    "id": "wc-sul",
    "name": "Banheiros (fundo do Palco Futuro)",
    "type": "banheiro",
+   "floor": 0,
    "at": [
     -22.9791752,
     -43.4105507
+   ]
+  },
+  {
+   "id": "escada-2p",
+   "name": "Escada rolante (descer para o térreo)",
+   "type": "escada",
+   "floor": 1,
+   "at": [
+    -22.9787202,
+    -43.411013
+   ]
+  },
+  {
+   "id": "wc-2p",
+   "name": "Banheiros (2º piso)",
+   "type": "banheiro",
+   "floor": 1,
+   "at": [
+    -22.9781608,
+    -43.4105915
    ]
   }
  ]
