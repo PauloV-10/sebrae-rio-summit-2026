@@ -13,6 +13,19 @@
 </head>
 <body>
 
+<div id="gate" class="gate-ovl" hidden>
+  <div class="gate-card">
+    <img class="gate-logo" src="assets/brand/portes-logo-full.png" alt="Portes Contabilidade">
+    <h2>Guia exclusivo do Summit</h2>
+    <p>Preencha o formulário da Portes e entre com o código recebido por e-mail. O acesso vale para um aparelho.</p>
+    <a id="gate-form" class="btn btn-primary gate-btn" href="#" target="_blank" rel="noopener" hidden>📝 Preencher o formulário da Portes</a>
+    <input id="gate-cod" maxlength="14" placeholder="Código recebido por e-mail" autocomplete="off" autocapitalize="characters">
+    <button id="gate-entrar" class="btn btn-whats gate-btn" type="button">🔓 Entrar com meu código</button>
+    <div id="gate-erro" class="gate-erro" hidden></div>
+    <small class="gate-nota">Sebrae Rio Summit 2026 · agenda, mapa ao vivo e alimentação</small>
+  </div>
+</div>
+
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">
@@ -148,6 +161,7 @@
   </a>
 </nav>
 
+<script src="assets/js/gate.js" defer></script>
 <script src="vendor/qrcode.js" defer></script>
 <script src="assets/js/agenda.js" defer></script>
 <script src="assets/js/mapa.js" defer></script>

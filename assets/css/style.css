@@ -427,6 +427,30 @@ main { max-width: 1180px; margin: 0 auto; padding: 14px; }
 .nav-item svg { width: 22px; height: 22px; }
 .nav-item.active { color: var(--petroleo); border-top-color: var(--dourado); }
 
+/* ---------- portão de acesso ---------- */
+.gate-ovl {
+  position: fixed; inset: 0; z-index: 300;
+  background: linear-gradient(150deg, var(--petroleo) 0%, var(--petroleo-escuro) 70%);
+  display: grid; place-items: center; padding: 20px; overflow: auto;
+}
+.gate-card {
+  background: var(--card); border-radius: 18px; max-width: 420px; width: 100%;
+  padding: 26px 22px; text-align: center;
+  box-shadow: 0 26px 80px rgba(8, 26, 32, .45);
+}
+.gate-logo { width: min(52vw, 190px); height: auto; margin-bottom: 10px; }
+.gate-card h2 { font-size: 1.25rem; margin-bottom: 6px; }
+.gate-card p { font-size: .86rem; color: var(--muted); margin: 0 0 16px; }
+.gate-btn { width: 100%; justify-content: center; min-height: 48px; }
+#gate-cod {
+  width: 100%; min-height: 48px; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; margin: 12px 0 10px; text-align: center;
+}
+#gate-cod:focus { outline: 2px solid var(--teal); border-color: var(--teal); }
+.gate-erro { color: var(--danger); font-size: .8rem; font-weight: 700; margin-top: 10px; }
+.gate-nota { display: block; color: var(--muted); font-size: .7rem; margin-top: 16px; }
+
 /* ---------- toast ---------- */
 .toast {
   position: fixed; bottom: calc(var(--bottombar-h) + 16px); left: 50%; transform: translateX(-50%);

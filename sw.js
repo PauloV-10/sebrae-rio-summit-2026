@@ -1,11 +1,12 @@
 /* Service worker: deixa o guia rápido e utilizável mesmo com internet fraca no pavilhão.
    Estratégia: rede primeiro para dados (JSON), cache primeiro para o restante. */
-const VERSION = 'srs26-v3';
+const VERSION = 'srs26-v4';
 const CORE = [
   './',
   'index.html',
   'assets/css/style.css',
   'assets/js/app.js',
+  'assets/js/gate.js',
   'assets/js/agenda.js',
   'assets/js/mapa.js',
   'assets/js/alimentacao.js',
